@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Desarrollo de Software a Medida",
+    "slug": "desarrollo-software",
+    "summary": "Diseñamos y construimos soluciones digitales adaptadas a las necesidades específicas de tu negocio, desde aplicaciones web hasta sistemas empresariales complejos.",
+    "icon": "code",
+    "features": [
+      "Aplicaciones web y móviles",
+      "Sistemas ERP y CRM personalizados",
+      "Integraciones con APIs de terceros",
+      "Arquitectura escalable y segura"
+    ]
+  },
+  {
+    "title": "Consultoría Tecnológica",
+    "slug": "consultoria-tecnologica",
+    "summary": "Acompañamos a tu equipo en la toma de decisiones técnicas con auditorías de arquitectura, roadmaps de producto y estrategias de transformación digital.",
+    "icon": "lightbulb",
+    "features": [
+      "Auditoría de arquitectura de software",
+      "Roadmap de producto y tecnología",
+      "Selección de stack tecnológico",
+      "Estrategia de transformación digital"
+    ]
+  },
+  {
+    "title": "Data & Automatización",
+    "slug": "data-automatizacion",
+    "summary": "Automatizamos procesos manuales y construimos pipelines de datos que impulsan decisiones inteligentes y operaciones eficientes.",
+    "icon": "database",
+    "features": [
+      "ETL y pipelines de datos",
+      "Dashboards e inteligencia de negocio",
+      "Web scraping y extracción de datos",
+      "Automatización de procesos (RPA)"
+    ]
+  }
+]
