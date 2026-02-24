@@ -1,0 +1,23 @@
+---
+title: 'Ciberseguridad en Sistemas SCADA Ferroviarios'
+date: '2023-11-20'
+summary: 'Las redes OT no pueden estar aisladas para siempre. Estrategias de protección para centros de control hiper-conectados.'
+cover: '/images/blog/ciberseguridad-scada.jpg'
+tags: ['Telecomunicaciones', 'Seguridad', 'SCADA']
+---
+
+Con la llegada del IoT industrial y la convergencia entre las redes IT (Information Technology) y OT (Operational Technology), los sistemas de control de supervisión y adquisición de datos (SCADA) de las redes de metro y trenes están más expuestos que nunca.
+
+## El Mito del Air-Gap
+
+Históricamente, la seguridad del tren dependía de un aislamiento físico o *air-gap*. Hoy, con el mantenimiento predictivo basado en la nube y los diagnósticos remotos del material rodante en tiempo real, ese aislamiento es un mito.
+
+### Estrategias de Defensa en Profundidad
+
+Para asegurar una red de telecomunicaciones que controla infraestructura crítica:
+
+- **Segmentación estricta de red militar:** Uso de zonas desmilitarizadas (DMZ) entre el ambiente corporativo y la red de control de tráfico (CTC).
+- **Monitoreo pasivo de anomalías:** IDS/IPS diseñados específicamente para entender protocolos OT como Modbus DNP3 y analizar si un comando de "abrir seccionador" hace sentido dentro del contexto operativo actual.
+- **Zero Trust Architecture:** Nunca confiar por defecto, siempre verificar la identidad criptográfica de las balizas y equipos de a bordo.
+
+La resiliencia operativa es el núcleo de nuestros diseños de telecomunicaciones e ingeniería de control para vías de máxima ocupación.

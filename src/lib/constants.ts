@@ -20,6 +20,7 @@ export const NAV_LINKS = [
     { href: ROUTES.servicios, label: 'Servicios' },
     { href: ROUTES.proyectos, label: 'Proyectos' },
     { href: ROUTES.sobreNosotros, label: 'Nosotros' },
+    { href: ROUTES.blog, label: 'Blog' },
     { href: ROUTES.contacto, label: 'Contacto' },
 ] as const;
 
