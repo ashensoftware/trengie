@@ -3,6 +3,7 @@ export interface Servicio {
     slug: string;
     summary: string;
     icon: string;
+    image?: string;
     features: string[];
     cta?: string;
 }

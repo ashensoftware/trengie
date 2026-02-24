@@ -1,54 +1,67 @@
 [
   {
-    "title": "Interventoría",
-    "slug": "interventoria",
-    "summary": "Supervisión técnica y administrativa de proyectos ferroviarios.",
+    "title": "Sistemas de Señalización Ferroviaria",
+    "slug": "sistemas-de-senalizacion",
+    "summary": "Optimización de sistemas de señalización para metro, tren ligero y ferrocarriles, garantizando interoperabilidad y seguridad funcional bajo normas internacionales (CENELEC).",
+    "icon": "cpu",
+    "image": "/images/services/senalizacion.jpg",
+    "features": [
+      "Integración de sistemas CCS (SCADA, ATS)",
+      "Implementación de RAMS (EN 50126/28/29)",
+      "Pruebas, interoperabilidad y puesta en marcha",
+      "Auditorías y diagnósticos técnicos"
+    ]
+  },
+  {
+    "title": "Ingeniería Eléctrica y Energías Aplicadas",
+    "slug": "ingenieria-electrica",
+    "summary": "Diseño e implementación de sistemas eléctricos en media y alta tensión, electrificación ferroviaria y control de energía en tiempo real (SCADA).",
+    "icon": "bolt",
+    "image": "/images/services/electrification.jpg",
+    "features": [
+      "Electrificación ferroviaria (catenaria, tercer riel)",
+      "Subestaciones de tracción y distribución",
+      "Integración con energías renovables",
+      "Optimización de consumos energéticos"
+    ]
+  },
+  {
+    "title": "Telecomunicaciones para Infraestructura",
+    "slug": "telecomunicaciones",
+    "summary": "Soluciones de comunicaciones críticas para transporte ferroviario y urbano, incluyendo redes de fibra óptica, IP redundante y comunicaciones tren-tierra.",
+    "icon": "wifi",
+    "image": "/images/services/telecom.jpg",
+    "features": [
+      "Redes críticas de fibra óptica e IP",
+      "Comunicaciones tren-tierra (TETRA, LTE-R, FRMCS)",
+      "Sistemas ITS y análisis de video",
+      "Centros de control y NOC"
+    ]
+  },
+  {
+    "title": "Material Rodante (Trenes)",
+    "slug": "material-rodante",
+    "summary": "Servicios integrales de montaje, integración de equipos embarcados, pruebas y mantenimiento preventivo/correctivo para flotas de trenes.",
+    "icon": "train",
+    "image": "/images/services/trenes.jpg",
+    "features": [
+      "Montaje y ensamblaje de trenes",
+      "Instalación de equipos (ETCS, CBTC, ATP)",
+      "Pruebas estáticas y dinámicas",
+      "Retrofit y modernización de flotas"
+    ]
+  },
+  {
+    "title": "Consultoría y Gerencia de Proyectos",
+    "slug": "consultoria-gerencia",
+    "summary": "Coordinación multidisciplinaria para proyectos complejos, abarcando desde estudios de factibilidad hasta la gerencia integral de obra y gestión contractual.",
     "icon": "clipboard",
+    "image": "/images/services/gerencia.jpg",
     "features": [
-      "Control de calidad en obra",
-      "Fiscalización de cronogramas",
-      "Gestión de riesgos",
-      "Reportes técnicos periódicos"
-    ],
-    "cta": "Solicitar información"
-  },
-  {
-    "title": "Estructuración",
-    "slug": "estructuracion",
-    "summary": "Diseño y planeación integral de proyectos de infraestructura.",
-    "icon": "drafting",
-    "features": [
-      "Estudios de factibilidad",
-      "Diseño de trazados",
-      "Análisis financiero",
-      "Documentación técnica"
-    ],
-    "cta": "Solicitar información"
-  },
-  {
-    "title": "Ejecución",
-    "slug": "ejecucion",
-    "summary": "Gestión de la construcción y puesta en marcha.",
-    "icon": "hardhat",
-    "features": [
-      "Dirección de obra",
-      "Gestión de contratistas",
-      "Control presupuestal",
-      "Comisionamiento"
-    ],
-    "cta": "Solicitar información"
-  },
-  {
-    "title": "Capacitación",
-    "slug": "capacitacion",
-    "summary": "Formación especializada para equipos del sector ferroviario.",
-    "icon": "graduation",
-    "features": [
-      "Programas a medida",
-      "Normativa internacional",
-      "Seguridad operacional",
-      "Certificación de competencias"
-    ],
-    "cta": "Solicitar información"
+      "Estudios de factibilidad técnica y económica",
+      "Gerencia de obra y control de calidad",
+      "Gestión contractual y de riesgos",
+      "Acompañamiento en licitaciones y PMO"
+    ]
   }
 ]

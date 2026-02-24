@@ -24,10 +24,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_SERVICES = [
-    { href: `${ROUTES.servicios}#interventoria`, label: 'Interventoría' },
-    { href: `${ROUTES.servicios}#estructuracion`, label: 'Estructuración' },
-    { href: `${ROUTES.servicios}#ejecucion`, label: 'Ejecución' },
-    { href: `${ROUTES.servicios}#capacitacion`, label: 'Capacitación' },
+    { href: `${ROUTES.servicios}#sistemas-de-senalizacion`, label: 'Señalización Ferroviaria' },
+    { href: `${ROUTES.servicios}#ingenieria-electrica`, label: 'Ingeniería Eléctrica' },
+    { href: `${ROUTES.servicios}#telecomunicaciones`, label: 'Telecomunicaciones' },
+    { href: `${ROUTES.servicios}#material-rodante`, label: 'Material Rodante' },
+    { href: `${ROUTES.servicios}#consultoria-gerencia`, label: 'Gerencia de Proyectos' },
 ] as const;
 
 export const LABELS = {
@@ -69,22 +70,22 @@ export const LABELS = {
         nuestraHistoria: 'Nuestra historia',
     },
     hero: {
-        label: 'Ingeniería Ferroviaria B2B',
+        label: 'Ingeniería y Gestión de Proyectos',
         titleStart: 'Infraestructura ferroviaria que',
         titleHighlight: 'mueve',
         titleEnd: 'el desarrollo',
         subtitle:
-            'Interventoría, estructuración y ejecución de proyectos ferroviarios con estándares internacionales de calidad y seguridad.',
+            'Excelencia técnica, ejecución eficiente y capacidad demostrada para abordar proyectos complejos que requieren coordinación multidisciplinar.',
     },
     subtitles: {
         servicios:
-            'Soluciones especializadas para cada fase de su proyecto ferroviario, con enfoque en resultados medibles.',
+            'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         serviciosDetalle:
-            'Cada módulo está diseñado para abordar una etapa específica del ciclo de vida de un proyecto de infraestructura ferroviaria.',
+            'Nuestras 5 verticales estratégicas cubren todas las áreas técnicas exigidas en proyectos complejos de infraestructura.',
         serviciosPage:
-            'Soluciones especializadas para cada fase de su proyecto ferroviario, con enfoque en resultados medibles.',
+            'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         nosotros:
-            'Más de 15 años conectando sistemas, territorios e industrias a través de la ingeniería ferroviaria.',
+            'Más de 15 años conectando sistemas, territorios e industrias mediante ingeniería especializada y gerencia ágil.',
         contacto:
             'Estamos disponibles para discutir sus necesidades de infraestructura ferroviaria. Elija el canal que prefiera para comunicarse con nosotros.',
         blog: 'Artículos, análisis y tendencias del sector ferroviario e infraestructura de transporte.',
@@ -116,20 +117,20 @@ export const LABELS = {
         descripcion: 'Hemos recibido su mensaje y le responderemos en menos de 24 horas.',
     },
     meta: {
-        titleSuffix: 'Ingeniería Ferroviaria de Clase Mundial',
+        titleSuffix: 'Ingeniería y Gestión de Proyectos',
         serviciosDesc:
-            'Interventoría, estructuración, ejecución y capacitación en proyectos de ingeniería ferroviaria.',
+            'Señalización, Ingeniería Eléctrica, Telecomunicaciones, Material Rodante y Gerencia de Proyectos para el sector ferroviario.',
         nosotrosDesc:
-            'Conoce a Trengie: más de 15 años de experiencia en consultoría e ingeniería ferroviaria en Latinoamérica.',
+            'Conoce a Trengie: excelencia técnica y ejecución eficiente en proyectos de infraestructura ferroviaria a nivel global.',
         contactoDesc:
-            'Hablemos de su proyecto de infraestructura ferroviaria. Solicite una consultoría gratuita.',
+            'Hablemos de su proyecto. Soluciones técnicas con estándares internacionales y modelo ágil de trabajo.',
         blogDesc:
             'Artículos sobre ingeniería ferroviaria, normativa y tendencias del sector transporte.',
         graciasDesc: 'Su mensaje ha sido enviado correctamente. Lo contactaremos pronto.',
     },
     footer: {
         brand:
-            'Consultoría e ingeniería ferroviaria de clase mundial para el desarrollo de infraestructura sostenible.',
+            'Ingeniería y consultoría técnica de clase mundial para el desarrollo de infraestructuras sostenibles.',
         copyright: 'Todos los derechos reservados.',
     },
     aria: {

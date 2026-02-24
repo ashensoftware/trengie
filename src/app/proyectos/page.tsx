@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
 import ProjectCard from '@/components/ProjectCard';
 import type { Proyecto } from '@/lib/types';
-import { LABELS } from '@/lib/constants';
+import { ROUTES, LABELS } from '@/lib/constants';
 import proyectos from '@/data/proyectos.json';
 
 const typedProyectos = proyectos as Proyecto[];
@@ -12,9 +13,6 @@ const categories = [LABELS.sections.todos, ...Array.from(new Set(typedProyectos.
 
 export default function ProyectosPage() {
     const [activeFilter, setActiveFilter] = useState<string>(LABELS.sections.todos);
-    const [selectedProject, setSelectedProject] = useState<Proyecto | null>(
-        typedProyectos[0] ?? null
-    );
 
     const filteredProjects =
         activeFilter === LABELS.sections.todos
@@ -58,48 +56,11 @@ export default function ProyectosPage() {
                     <div className="flex-1">
                         <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                             {filteredProjects.map((p) => (
-                                <div key={p.slug} onClick={() => setSelectedProject(p)}>
+                                <Link key={p.slug} href={`${ROUTES.proyectos}/${p.slug}`}>
                                     <ProjectCard project={p} />
-                                </div>
+                                </Link>
                             ))}
                         </div>
-
-                        {selectedProject && (
-                            <div className="mt-8 rounded-xl border border-dark-border bg-dark-card p-5 sm:mt-10 sm:p-8">
-                                <span className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange">
-                                    <span className="inline-block h-2 w-2 rounded-full bg-orange" />
-                                    {LABELS.sections.fichaTecnica}
-                                </span>
-                                <h3 className="text-xl font-bold text-white sm:text-2xl">{selectedProject.title}</h3>
-                                <p className="mt-3 text-sm leading-relaxed text-white/60">
-                                    {selectedProject.summary}
-                                </p>
-                                <div className="mt-4 grid gap-4 sm:mt-6 sm:grid-cols-3 sm:gap-6">
-                                    <div>
-                                        <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                                            {LABELS.sections.alcance}
-                                        </span>
-                                        <span className="mt-1 block text-sm text-white/80">
-                                            {selectedProject.scope}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                                            {LABELS.sections.rol}
-                                        </span>
-                                        <span className="mt-1 block text-sm text-white/80">{selectedProject.role}</span>
-                                    </div>
-                                    <div>
-                                        <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                                            {LABELS.sections.resultados}
-                                        </span>
-                                        <span className="mt-1 block text-sm font-semibold text-orange">
-                                            {selectedProject.results}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>

@@ -74,41 +74,11 @@ export default function HomePage() {
             />
             <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
               {typedProyectos.slice(0, 3).map((p) => (
-                <ProjectCard key={p.slug} project={p} />
+                <Link key={p.slug} href={`${ROUTES.proyectos}/${p.slug}`}>
+                  <ProjectCard project={p} />
+                </Link>
               ))}
             </div>
-
-            {typedProyectos[0] && (
-              <div className="mt-8 rounded-xl border border-dark-border bg-dark-card p-5 sm:mt-10 sm:p-8">
-                <span className="mb-2 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-orange">
-                  <span className="inline-block h-2 w-2 rounded-full bg-orange" />
-                  {LABELS.sections.fichaTecnica}
-                </span>
-                <h3 className="text-xl font-bold text-white sm:text-2xl">{typedProyectos[0].title}</h3>
-                <div className="mt-4 grid gap-4 sm:mt-6 sm:grid-cols-3 sm:gap-6">
-                  <div>
-                    <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                      {LABELS.sections.alcance}
-                    </span>
-                    <span className="mt-1 block text-sm text-white/80">{typedProyectos[0].scope}</span>
-                  </div>
-                  <div>
-                    <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                      {LABELS.sections.rol}
-                    </span>
-                    <span className="mt-1 block text-sm text-white/80">{typedProyectos[0].role}</span>
-                  </div>
-                  <div>
-                    <span className="block text-xs font-semibold uppercase tracking-wider text-white/40">
-                      {LABELS.sections.resultados}
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-orange">
-                      {typedProyectos[0].results}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            )}
 
             <div className="mt-8 text-center sm:mt-10">
               <Link

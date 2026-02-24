@@ -25,8 +25,8 @@ export default function Hero({
     showStats = true,
 }: HeroProps) {
     return (
-        <section className="relative h-dvh overflow-hidden bg-dark">
-            <div className="absolute inset-0">
+        <section className="relative flex min-h-dvh flex-col overflow-hidden bg-dark">
+            <div className="absolute inset-0 pointer-events-none">
                 <BrandImage
                     src={backgroundImage}
                     alt="Infraestructura ferroviaria"
@@ -40,8 +40,8 @@ export default function Hero({
                 <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/50" />
             </div>
 
-            <div className="relative mx-auto flex h-dvh max-w-7xl flex-col justify-end px-4 pt-20 pb-0 sm:px-6">
-                <div className="max-w-2xl pb-6">
+            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-24 sm:px-6 lg:py-32">
+                <div className="max-w-2xl">
                     <span className="mb-3 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-orange sm:mb-4 sm:text-xs">
                         <span className="inline-block h-1.5 w-1.5 rounded-full bg-orange sm:h-2 sm:w-2" />
                         {label}
@@ -63,7 +63,7 @@ export default function Hero({
                     </p>
 
                     {showCtas && (
-                        <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+                        <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
                             <Link href={ROUTES.contacto} className="btn-primary inline-flex items-center justify-center gap-2 text-center">
                                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
@@ -79,24 +79,24 @@ export default function Hero({
                         </div>
                     )}
                 </div>
-
-                {showStats && heroStats.length > 0 && (
-                    <div className="border-t border-white/10 bg-dark/60 backdrop-blur-sm">
-                        <div className="grid grid-cols-3 divide-x divide-white/10">
-                            {heroStats.map((stat) => (
-                                <div key={stat.label} className="px-3 py-4 text-center sm:px-6 sm:py-6">
-                                    <span className="text-2xl font-bold text-orange sm:text-3xl md:text-4xl">
-                                        {stat.value}
-                                    </span>
-                                    <span className="mt-0.5 block text-[9px] font-medium uppercase tracking-wider text-white/50 sm:mt-1 sm:text-xs">
-                                        {stat.label}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
             </div>
+
+            {showStats && heroStats.length > 0 && (
+                <div className="relative z-20 w-full border-t border-white/10 bg-dark/60 backdrop-blur-sm">
+                    <div className="mx-auto max-w-7xl grid grid-cols-3 divide-x divide-white/10">
+                        {heroStats.map((stat) => (
+                            <div key={stat.label} className="px-3 py-6 text-center sm:px-6">
+                                <span className="text-2xl font-bold text-orange sm:text-3xl md:text-4xl">
+                                    {stat.value}
+                                </span>
+                                <span className="mt-1 block text-[9px] font-medium uppercase tracking-wider text-white/50 sm:text-xs">
+                                    {stat.label}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

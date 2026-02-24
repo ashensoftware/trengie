@@ -8,24 +8,24 @@ export const heroStats: Stat[] = [
 
 export const companyValues: Value[] = [
     {
-        title: 'Seguridad',
-        description: 'Estándares internacionales en cada proyecto',
-        icon: 'shield',
+        title: 'Excelencia Técnica',
+        description: 'Especialización en nichos de alta complejidad y cumplimiento de normativas internacionales (CENELEC, ISO).',
+        icon: 'award',
     },
     {
-        title: 'Precisión',
-        description: 'Ingeniería de detalle y control riguroso',
+        title: 'Soluciones Integrales',
+        description: 'Cubrimos el ciclo completo: factibilidad, ingeniería conceptual, pruebas, operación y mantenimiento.',
         icon: 'target',
     },
     {
-        title: 'Colaboración',
-        description: 'Trabajo conjunto con todos los stakeholders',
+        title: 'Agilidad y Flexibilidad',
+        description: 'Modelo asociativo y estructura ligera que nos permite adaptarnos rápidamente a cada proyecto.',
         icon: 'users',
     },
     {
-        title: 'Excelencia',
-        description: 'Compromiso con resultados excepcionales',
-        icon: 'award',
+        title: 'Visión Global',
+        description: 'Capacidad demostrable de ejecución en proyectos internacionales y adopción de tecnologías de vanguardia.',
+        icon: 'shield',
     },
 ];
 
@@ -59,7 +59,7 @@ export const contactChannels: ContactChannel[] = [
 
 export const companyDescription = {
     intro:
-        'Trengie es una firma de consultoría e ingeniería especializada en el sector ferroviario. Con más de 15 años de trayectoria, hemos participado en los proyectos de infraestructura de transporte más ambiciosos de la región.',
+        'Trengie es una compañía de ingeniería y gestión de proyectos caracterizada por su excelencia técnica, ejecución eficiente y capacidad para abordar proyectos complejos que requieren coordinación multidisciplinar.',
     detail:
-        'Nuestro equipo multidisciplinario combina experiencia técnica de clase mundial con conocimiento profundo del contexto local, asegurando soluciones viables, sostenibles y de alto impacto para nuestros clientes.',
+        'Nacemos con una fuerte especialización en el sector ferroviario, ofreciendo soluciones integrales que cubren desde la ingeniería conceptual hasta la puesta en marcha y operación. Nuestro modelo ágil y nuestra capacidad de integrar diversas disciplinas nos permiten entregar proyectos llave en mano con los más altos estándares internacionales.',
 };
