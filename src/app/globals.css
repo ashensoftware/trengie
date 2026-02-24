@@ -3,22 +3,91 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-orange: #ef7e24;
+  --color-orange-hover: #d96d15;
+  --color-dune: #333333;
+  --color-blue-bell: #8e9ed0;
+  --color-boulder: #7a7a7a;
+  --color-grey: #d7cdc1;
+  --color-alabaster: #fafbf8;
+  --color-dark: #1a1a1a;
+  --color-dark-card: #242424;
+  --color-dark-border: #333333;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafbf8;
+  --foreground: #333333;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prose styles for MDX blog content */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background-color: #ef7e24;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ef7e24;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d96d15;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .prose {
   line-height: 1.75;
 }
@@ -28,7 +97,7 @@ body {
   margin-bottom: 0.75em;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #171717;
+  color: #333333;
 }
 
 .prose h3 {
@@ -36,12 +105,12 @@ body {
   margin-bottom: 0.5em;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #171717;
+  color: #333333;
 }
 
 .prose p {
   margin-bottom: 1.25em;
-  color: #525252;
+  color: #7a7a7a;
 }
 
 .prose ul,
@@ -52,30 +121,30 @@ body {
 
 .prose li {
   margin-bottom: 0.5em;
-  color: #525252;
+  color: #7a7a7a;
 }
 
 .prose strong {
   font-weight: 600;
-  color: #171717;
+  color: #333333;
 }
 
 .prose a {
-  color: #171717;
+  color: #ef7e24;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .prose a:hover {
-  color: #525252;
+  color: #d96d15;
 }
 
 .prose blockquote {
-  border-left: 3px solid #d4d4d4;
+  border-left: 3px solid #ef7e24;
   padding-left: 1em;
   margin: 1.5em 0;
   font-style: italic;
-  color: #737373;
+  color: #7a7a7a;
 }
 
 .prose code {
@@ -86,7 +155,7 @@ body {
 }
 
 .prose pre {
-  background-color: #171717;
+  background-color: #1a1a1a;
   color: #e5e5e5;
   padding: 1em;
   border-radius: 0.75rem;
@@ -107,20 +176,20 @@ body {
 
 .prose th,
 .prose td {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d7cdc1;
   padding: 0.5em 0.75em;
   text-align: left;
-  color: #525252;
+  color: #7a7a7a;
 }
 
 .prose th {
-  background-color: #fafafa;
+  background-color: #fafbf8;
   font-weight: 600;
-  color: #171717;
+  color: #333333;
 }
 
 .prose hr {
   border: none;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #d7cdc1;
   margin: 2em 0;
 }

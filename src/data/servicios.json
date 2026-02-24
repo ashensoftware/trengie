@@ -1,38 +1,54 @@
 [
   {
-    "title": "Desarrollo de Software a Medida",
-    "slug": "desarrollo-software",
-    "summary": "Diseñamos y construimos soluciones digitales adaptadas a las necesidades específicas de tu negocio, desde aplicaciones web hasta sistemas empresariales complejos.",
-    "icon": "code",
+    "title": "Interventoría",
+    "slug": "interventoria",
+    "summary": "Supervisión técnica y administrativa de proyectos ferroviarios.",
+    "icon": "clipboard",
     "features": [
-      "Aplicaciones web y móviles",
-      "Sistemas ERP y CRM personalizados",
-      "Integraciones con APIs de terceros",
-      "Arquitectura escalable y segura"
-    ]
+      "Control de calidad en obra",
+      "Fiscalización de cronogramas",
+      "Gestión de riesgos",
+      "Reportes técnicos periódicos"
+    ],
+    "cta": "Solicitar información"
   },
   {
-    "title": "Consultoría Tecnológica",
-    "slug": "consultoria-tecnologica",
-    "summary": "Acompañamos a tu equipo en la toma de decisiones técnicas con auditorías de arquitectura, roadmaps de producto y estrategias de transformación digital.",
-    "icon": "lightbulb",
+    "title": "Estructuración",
+    "slug": "estructuracion",
+    "summary": "Diseño y planeación integral de proyectos de infraestructura.",
+    "icon": "drafting",
     "features": [
-      "Auditoría de arquitectura de software",
-      "Roadmap de producto y tecnología",
-      "Selección de stack tecnológico",
-      "Estrategia de transformación digital"
-    ]
+      "Estudios de factibilidad",
+      "Diseño de trazados",
+      "Análisis financiero",
+      "Documentación técnica"
+    ],
+    "cta": "Solicitar información"
   },
   {
-    "title": "Data & Automatización",
-    "slug": "data-automatizacion",
-    "summary": "Automatizamos procesos manuales y construimos pipelines de datos que impulsan decisiones inteligentes y operaciones eficientes.",
-    "icon": "database",
+    "title": "Ejecución",
+    "slug": "ejecucion",
+    "summary": "Gestión de la construcción y puesta en marcha.",
+    "icon": "hardhat",
     "features": [
-      "ETL y pipelines de datos",
-      "Dashboards e inteligencia de negocio",
-      "Web scraping y extracción de datos",
-      "Automatización de procesos (RPA)"
-    ]
+      "Dirección de obra",
+      "Gestión de contratistas",
+      "Control presupuestal",
+      "Comisionamiento"
+    ],
+    "cta": "Solicitar información"
+  },
+  {
+    "title": "Capacitación",
+    "slug": "capacitacion",
+    "summary": "Formación especializada para equipos del sector ferroviario.",
+    "icon": "graduation",
+    "features": [
+      "Programas a medida",
+      "Normativa internacional",
+      "Seguridad operacional",
+      "Certificación de competencias"
+    ],
+    "cta": "Solicitar información"
   }
 ]

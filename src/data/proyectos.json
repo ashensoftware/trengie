@@ -1,58 +1,96 @@
 [
     {
-        "title": "Plataforma Logística Inteligente",
-        "slug": "plataforma-logistica",
-        "client": "LogiTrack Corp",
-        "summary": "Sistema integral de gestión logística con tracking en tiempo real, optimización de rutas y panel de control para operadores.",
-        "cover": "/images/projects/logistica-cover.jpg",
-        "reto": "El cliente manejaba más de 500 envíos diarios con hojas de cálculo, generando retrasos, pérdidas y falta de visibilidad sobre el estado de cada entrega.",
-        "solucion": "Desarrollamos una plataforma web con mapa interactivo, notificaciones en tiempo real y dashboards personalizados para cada rol del equipo logístico.",
-        "resultados": [
-            "Reducción del 40% en tiempos de entrega",
-            "Eliminación de reportes manuales",
-            "Visibilidad en tiempo real para clientes finales",
-            "Integración automática con transportistas"
-        ],
-        "stack": [
-            "Next.js",
-            "TypeScript",
-            "PostgreSQL",
-            "Redis",
-            "Docker",
-            "AWS"
-        ],
+        "title": "Metro Línea 2 — Bogotá",
+        "slug": "metro-linea-2-bogota",
+        "category": "Interventoría",
+        "year": 2023,
+        "location": "Bogotá, Colombia",
+        "cover": "/images/projects/metro-bogota.jpg",
+        "summary": "Supervisión técnica de 12 estaciones del sistema Metro de Bogotá, asegurando cumplimiento de estándares internacionales de calidad y seguridad.",
+        "scope": "Supervisión técnica de 12 estaciones",
+        "role": "Interventoría integral",
+        "results": "100% cumplimiento normativo",
         "images": [
-            "/images/projects/logistica-1.jpg",
-            "/images/projects/logistica-2.jpg",
-            "/images/projects/logistica-3.jpg"
+            "/images/projects/metro-bogota-1.jpg",
+            "/images/projects/metro-bogota-2.jpg",
+            "/images/projects/metro-bogota-3.jpg"
         ]
     },
     {
-        "title": "Portal de Cumplimiento Regulatorio",
-        "slug": "portal-cumplimiento",
-        "client": "FinReg Solutions",
-        "summary": "Plataforma de monitoreo regulatorio que centraliza normativas de múltiples entidades gubernamentales y alerta sobre cambios relevantes.",
-        "cover": "/images/projects/cumplimiento-cover.jpg",
-        "reto": "El equipo legal del cliente revisaba manualmente los sitios web de 15 entidades reguladoras diariamente, un proceso tedioso y propenso a errores.",
-        "solucion": "Creamos un sistema de scraping automatizado con clasificación por IA, alertas personalizables y un portal web con búsqueda avanzada y filtros por jurisdicción.",
-        "resultados": [
-            "Monitoreo automático de 15+ fuentes regulatorias",
-            "Alertas en tiempo real por correo y Slack",
-            "Reducción del 90% en tiempo de revisión manual",
-            "Base de datos histórica con más de 50,000 normas"
-        ],
-        "stack": [
-            "Python",
-            "React",
-            "FastAPI",
-            "Playwright",
-            "OpenAI",
-            "GCP"
-        ],
+        "title": "Puente Ferroviario Río Magdalena",
+        "slug": "puente-ferroviario-rio-magdalena",
+        "category": "Ejecución",
+        "year": 2022,
+        "location": "Barrancabermeja, Colombia",
+        "cover": "/images/projects/puente-magdalena.jpg",
+        "summary": "Dirección técnica y gestión integral de la construcción del puente ferroviario sobre el Río Magdalena, conectando dos corredores logísticos estratégicos.",
+        "scope": "Construcción de puente ferroviario de 450m",
+        "role": "Dirección técnica",
+        "results": "Entrega anticipada en 8 meses",
         "images": [
-            "/images/projects/cumplimiento-1.jpg",
-            "/images/projects/cumplimiento-2.jpg",
-            "/images/projects/cumplimiento-3.jpg"
+            "/images/projects/puente-magdalena-1.jpg",
+            "/images/projects/puente-magdalena-2.jpg"
+        ]
+    },
+    {
+        "title": "Centro de Control Operacional",
+        "slug": "centro-control-operacional",
+        "category": "Estructuración",
+        "year": 2024,
+        "location": "Medellín, Colombia",
+        "cover": "/images/projects/centro-control.jpg",
+        "summary": "Estructuración y diseño conceptual del centro de control operacional para la red de transporte masivo, integrando sistemas de monitoreo en tiempo real.",
+        "scope": "Diseño integral de centro de control",
+        "role": "Estructuración técnica",
+        "results": "Integración de 5 líneas de transporte",
+        "images": [
+            "/images/projects/centro-control-1.jpg",
+            "/images/projects/centro-control-2.jpg"
+        ]
+    },
+    {
+        "title": "Corredor Férreo del Pacífico",
+        "slug": "corredor-ferreo-pacifico",
+        "category": "Interventoría",
+        "year": 2023,
+        "location": "Valle del Cauca, Colombia",
+        "cover": "/images/projects/corredor-pacifico.jpg",
+        "summary": "Interventoría técnica para la rehabilitación de 150km del corredor férreo que conecta Buenaventura con el interior del país.",
+        "scope": "Rehabilitación de 150km de vía férrea",
+        "role": "Interventoría técnica",
+        "results": "Reducción del 35% en tiempos de transporte",
+        "images": [
+            "/images/projects/corredor-pacifico-1.jpg"
+        ]
+    },
+    {
+        "title": "Tranvía de Ayacucho",
+        "slug": "tranvia-ayacucho",
+        "category": "Ejecución",
+        "year": 2022,
+        "location": "Medellín, Colombia",
+        "cover": "/images/projects/tranvia-ayacucho.jpg",
+        "summary": "Gestión técnica de la extensión del sistema tranviario, incluyendo nuevas estaciones y optimización de la operación existente.",
+        "scope": "Extensión de 4.3km de línea tranviaria",
+        "role": "Gestión técnica integral",
+        "results": "45,000 usuarios diarios beneficiados",
+        "images": [
+            "/images/projects/tranvia-ayacucho-1.jpg"
+        ]
+    },
+    {
+        "title": "Sistema Ferroviario Regional Norte",
+        "slug": "ferroviario-regional-norte",
+        "category": "Estructuración",
+        "year": 2024,
+        "location": "Cundinamarca, Colombia",
+        "cover": "/images/projects/ferroviario-norte.jpg",
+        "summary": "Estudios de factibilidad y diseño conceptual para el sistema ferroviario regional que conectará municipios del norte de Cundinamarca con Bogotá.",
+        "scope": "Estudio de factibilidad para 85km",
+        "role": "Estructuración y estudios",
+        "results": "Viabilidad técnica y financiera aprobada",
+        "images": [
+            "/images/projects/ferroviario-norte-1.jpg"
         ]
     }
 ]

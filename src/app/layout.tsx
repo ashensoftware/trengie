@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 import { siteConfig } from '@/lib/config';
+import { LABELS } from '@/lib/constants';
 import './globals.css';
 
 const geistSans = Geist({
@@ -18,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Soluciones Tecnológicas a Medida`,
+    default: `${siteConfig.name} — ${LABELS.meta.titleSuffix}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -52,7 +54,9 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main>
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
       </body>
     </html>

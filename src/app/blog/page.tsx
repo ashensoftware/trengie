@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import BlogCard from '@/components/BlogCard';
 import { getAllPosts } from '@/lib/blog';
+import { LABELS } from '@/lib/constants';
 
 export const metadata: Metadata = {
-    title: 'Blog',
-    description:
-        'Artículos sobre tecnología, desarrollo de software, automatización y buenas prácticas.',
+    title: LABELS.sections.knowledgeHub,
+    description: LABELS.meta.blogDesc,
 };
 
 export default function BlogPage() {
@@ -13,21 +13,25 @@ export default function BlogPage() {
 
     return (
         <>
-            <section className="bg-neutral-900 px-6 py-20 text-center">
+            <section className="bg-dark px-4 pt-28 pb-16 text-center sm:px-6 sm:pt-32 sm:pb-20">
                 <div className="mx-auto max-w-3xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Blog</h1>
-                    <p className="mt-6 text-lg leading-relaxed text-neutral-300">
-                        Ideas, tutoriales y reflexiones sobre tecnología y negocio.
+                    <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+                        {LABELS.sections.knowledgeHub}
+                    </h1>
+                    <p className="mt-4 text-base leading-relaxed text-white/70 sm:mt-6 sm:text-lg">
+                        {LABELS.subtitles.blog}
                     </p>
                 </div>
             </section>
 
-            <section className="px-6 py-20">
+            <section className="bg-alabaster px-4 py-16 sm:px-6 sm:py-20">
                 <div className="mx-auto max-w-5xl">
                     {posts.length === 0 ? (
-                        <p className="text-center text-neutral-500">No hay artículos publicados aún.</p>
+                        <div className="rounded-xl border border-grey/50 bg-white p-8 text-center sm:p-12">
+                            <p className="text-boulder">{LABELS.subtitles.blogEmpty}</p>
+                        </div>
                     ) : (
-                        <div className="grid gap-6 md:grid-cols-2">
+                        <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
                             {posts.map((post) => (
                                 <BlogCard key={post.slug} post={post} />
                             ))}

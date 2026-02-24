@@ -1,39 +1,43 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { siteConfig } from '@/lib/config';
-
-const navLinks = [
-    { href: '/', label: 'Inicio' },
-    { href: '/servicios', label: 'Servicios' },
-    { href: '/proyectos', label: 'Proyectos' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/sobre-nosotros', label: 'Nosotros' },
-    { href: '/contacto', label: 'Contacto' },
-];
+import BrandImage from '@/components/BrandImage';
+import { ASSETS, ROUTES, NAV_LINKS, LABELS } from '@/lib/constants';
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md">
+        <header className="fixed top-0 right-0 left-0 z-50 border-b border-grey/30 bg-white/95 shadow-sm backdrop-blur-md">
             <nav
-                className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
-                aria-label="Navegación principal"
+                className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4"
+                aria-label={LABELS.aria.navPrincipal}
             >
-                {/* Logo */}
-                <Link href="/" className="text-xl font-bold tracking-tight text-neutral-900">
-                    {siteConfig.name}
+                <Link href={ROUTES.home} className="relative h-8 w-28 sm:h-9 sm:w-32">
+                    <BrandImage
+                        src={ASSETS.logo}
+                        alt="Trengie"
+                        fill
+                        className="object-contain object-left"
+                        fallbackWidth={128}
+                        fallbackHeight={36}
+                        fallbackLabel="Trengie"
+                        priority
+                    />
                 </Link>
 
-                {/* Desktop nav */}
-                <ul className="hidden items-center gap-8 md:flex">
-                    {navLinks.map((link) => (
+                <ul className="hidden items-center gap-6 lg:flex">
+                    {NAV_LINKS.map((link) => (
                         <li key={link.href}>
                             <Link
                                 href={link.href}
-                                className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900"
+                                className={`text-sm font-semibold uppercase tracking-wider transition-colors ${pathname === link.href || pathname.startsWith(`${link.href}/`)
+                                        ? 'text-orange'
+                                        : 'text-dune/70 hover:text-dune'
+                                    }`}
                             >
                                 {link.label}
                             </Link>
@@ -41,19 +45,17 @@ export default function Header() {
                     ))}
                 </ul>
 
-                {/* CTA desktop */}
                 <Link
-                    href="/contacto"
-                    className="hidden rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-700 md:inline-flex"
+                    href={ROUTES.contacto}
+                    className="btn-primary hidden text-xs sm:text-sm lg:inline-flex"
                 >
-                    Cotizar
+                    {LABELS.cta.cotizar}
                 </Link>
 
-                {/* Mobile hamburger */}
                 <button
                     type="button"
-                    className="inline-flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-100 md:hidden"
-                    aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+                    className="inline-flex items-center justify-center rounded-md p-2 text-dune/70 hover:bg-grey/30 lg:hidden"
+                    aria-label={mobileOpen ? LABELS.aria.cerrarMenu : LABELS.aria.abrirMenu}
                     aria-expanded={mobileOpen}
                     onClick={() => setMobileOpen(!mobileOpen)}
                 >
@@ -69,33 +71,36 @@ export default function Header() {
                 </button>
             </nav>
 
-            {/* Mobile menu */}
-            {mobileOpen && (
-                <div className="border-t border-neutral-200 bg-white md:hidden">
-                    <ul className="space-y-1 px-6 py-4">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    className="block rounded-md px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-50"
-                                    onClick={() => setMobileOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
-                        ))}
-                        <li>
+            <div
+                className={`overflow-hidden border-t border-grey/30 bg-white transition-all duration-300 ease-in-out lg:hidden ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-t-0'
+                    }`}
+            >
+                <ul className="space-y-1 px-4 py-4 sm:px-6">
+                    {NAV_LINKS.map((link) => (
+                        <li key={link.href}>
                             <Link
-                                href="/contacto"
-                                className="mt-2 block rounded-lg bg-neutral-900 px-4 py-2.5 text-center text-sm font-medium text-white"
+                                href={link.href}
+                                className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${pathname === link.href
+                                        ? 'bg-orange/10 text-orange'
+                                        : 'text-dune/70 hover:bg-grey/20'
+                                    }`}
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Cotizar
+                                {link.label}
                             </Link>
                         </li>
-                    </ul>
-                </div>
-            )}
+                    ))}
+                    <li>
+                        <Link
+                            href={ROUTES.contacto}
+                            className="btn-primary mt-2 block w-full text-center"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            {LABELS.cta.cotizar}
+                        </Link>
+                    </li>
+                </ul>
+            </div>
         </header>
     );
 }
