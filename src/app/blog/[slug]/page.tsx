@@ -46,8 +46,23 @@ export default async function BlogPostPage({ params }: Props) {
     const allPosts = getAllPosts();
     const relatedPosts = allPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
+    const articleJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.title,
+        description: post.summary,
+        datePublished: post.date,
+        author: { '@type': 'Organization', name: 'Trengie' },
+        publisher: { '@type': 'Organization', name: 'Trengie' },
+        ...(post.cover ? { image: `https://trengie.com${post.cover}` } : {}),
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+            />
             <section className="relative min-h-[50vh] flex flex-col justify-end px-6 pt-32 pb-16 sm:pb-20 overflow-hidden bg-dark">
                 {post.cover && (
                     <div className="absolute inset-0 pointer-events-none">
