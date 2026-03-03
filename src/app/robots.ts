@@ -1,4 +1,5 @@
-import type { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next';
+import { siteConfig } from '@/lib/config';
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://trengie.com/sitemap.xml',
+        sitemap: `${siteConfig.url}/sitemap.xml`,
     };
 }

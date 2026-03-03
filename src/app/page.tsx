@@ -1,50 +1,44 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
-import Hero from '@/components/Hero';
-import SectionHeading from '@/components/SectionHeading';
-import ServiceCard from '@/components/ServiceCard';
-import ProjectCard from '@/components/ProjectCard';
-import ContactForm from '@/components/ContactForm';
+import Hero from '@/components/features/Hero';
+import SectionHeading from '@/components/ui/SectionHeading';
+import ServiceCard from '@/components/features/ServiceCard';
+import ProjectCard from '@/components/features/ProjectCard';
+import ContactForm from '@/components/features/ContactForm';
+import JsonLd from '@/components/ui/JsonLd';
+import { Icons } from '@/components/ui/Icons';
 import type { Servicio, Proyecto } from '@/lib/types';
 import { ROUTES, LABELS } from '@/lib/constants';
-import { companyValues, certifications, companyDescription } from '@/data/site';
+import { siteConfig } from '@/lib/config';
+import { companyDescription } from '@/data/site';
 import servicios from '@/data/servicios.json';
 import proyectos from '@/data/proyectos.json';
-
-const valueIcons: Record<string, React.ReactNode> = {
-  shield: (
-    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-    </svg>
-  ),
-  target: (
-    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12a3 3 0 106 0 3 3 0 00-6 0z" />
-    </svg>
-  ),
-  users: (
-    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-    </svg>
-  ),
-  award: (
-    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.023 6.023 0 01-2.77.896m5.25-6.854a6.012 6.012 0 01-2.771.896" />
-    </svg>
-  ),
-};
 
 export default function HomePage() {
   const typedServicios = servicios as Servicio[];
   const typedProyectos = proyectos as Proyecto[];
 
+  const homeSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteConfig.url}/blog?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <>
+      <JsonLd data={homeSchema} />
       <Hero
-        title={LABELS.hero.titleStart}
-        highlight={LABELS.hero.titleHighlight}
-        titleEnd={LABELS.hero.titleEnd}
+        label={LABELS.hero.label}
+        title={LABELS.hero.title}
         subtitle={LABELS.hero.subtitle}
+        priority
       />
 
       {typedServicios.length > 0 && (
@@ -74,9 +68,7 @@ export default function HomePage() {
             />
             <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
               {typedProyectos.slice(0, 3).map((p) => (
-                <Link key={p.slug} href={`${ROUTES.proyectos}/${p.slug}`}>
-                  <ProjectCard project={p} />
-                </Link>
+                <ProjectCard key={p.slug} project={p} />
               ))}
             </div>
 
@@ -85,59 +77,71 @@ export default function HomePage() {
                 href={ROUTES.proyectos}
                 className="text-sm font-medium text-white/60 underline underline-offset-4 transition-colors hover:text-white"
               >
-                {LABELS.cta.verTodosProyectos}
+                {LABELS.cta.verProyectos}
               </Link>
             </div>
           </div>
         </section>
       )}
 
-      {companyValues.length > 0 && (
-        <section id="nosotros" className="bg-alabaster px-4 py-16 sm:px-6 sm:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-              <div>
-                <SectionHeading label={LABELS.sections.nosotros} title={LABELS.headings.nosotros} />
-                <p className="mt-6 leading-relaxed text-boulder">{companyDescription.intro}</p>
-                <p className="mt-4 leading-relaxed text-boulder">{companyDescription.detail}</p>
-
-                {certifications.length > 0 && (
-                  <div className="mt-8">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-orange">
-                      {LABELS.sections.certificaciones}
-                    </span>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {certifications.map((cert) => (
-                        <span
-                          key={cert.name}
-                          className="rounded-full border border-dune/20 bg-white px-3 py-1 text-xs font-semibold text-dune"
-                        >
-                          {cert.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+      {/* ── MISIÓN & VISIÓN — Compact ── */}
+      <section className="bg-[#0c0e13] px-4 py-16 sm:px-6 sm:py-24 border-t border-white/5">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+            {/* Misión */}
+            <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-10 transition-all hover:border-orange/30">
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange">
+                  <Icons.Bolt className="h-6 w-6" />
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-4">
+                  {LABELS.headings.mision}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/50 mb-6">
+                  {companyDescription.mission}
+                </p>
+                <Link href={ROUTES.sobreNosotros} className="text-[10px] font-black uppercase tracking-widest text-orange flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Saber más <Icons.ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
+            </div>
 
-              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-                {companyValues.map((value) => (
-                  <div
-                    key={value.title}
-                    className="rounded-xl border border-grey/50 bg-white p-5 transition-all hover:border-orange/30 hover:shadow-md sm:p-6"
-                  >
-                    <div className="mb-3 inline-flex rounded-lg bg-orange/10 p-2.5 text-orange">
-                      {valueIcons[value.icon] ?? valueIcons.shield}
-                    </div>
-                    <h3 className="text-base font-bold text-dune">{value.title}</h3>
-                    <p className="mt-1 text-sm text-boulder">{value.description}</p>
-                  </div>
-                ))}
+            {/* Visión */}
+            <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-10 transition-all hover:border-orange/30">
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange">
+                  <Icons.Eye className="h-6 w-6" />
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-4">
+                  {LABELS.headings.vision}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/50 mb-6">
+                  {companyDescription.vision}
+                </p>
+                <Link href={ROUTES.sobreNosotros} className="text-[10px] font-black uppercase tracking-widest text-orange flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Saber más <Icons.ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+      {/* ── SECCIÓN DE CIERRE E IMPULSO ── */}
+      <section className="bg-gradient-to-br from-orange to-[#b35a15] px-4 py-24 sm:px-6 text-center relative overflow-hidden shadow-[inset_0_20px_40px_rgba(0,0,0,0.2)]">
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="mx-auto max-w-4xl relative z-10">
+          <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-6 sm:text-5xl drop-shadow-lg">
+            Reduzca riesgos en su megaproyecto ferroviario
+          </h2>
+          <p className="text-white/90 text-xl font-medium mb-12 max-w-2xl mx-auto tracking-wide drop-shadow">
+            Evite sobrecostos y garantice el cumplimiento normativo (CENELEC / SIL4) desde la estructuración técnica.
+          </p>
+          <Link href={ROUTES.contacto} className="btn-secondary !bg-[#0c0e13] !text-white hover:!bg-[#1a1a1a] !border-none !py-5 !px-12 !text-lg !rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] hover:-translate-y-1 transition-all duration-300 font-black uppercase tracking-widest focus-visible:ring-4 focus-visible:ring-white">
+            Hablar con un experto
+          </Link>
+        </div>
+      </section>
 
       <section id="contacto" className="bg-dark px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-7xl">
@@ -147,7 +151,9 @@ export default function HomePage() {
             light
           />
           <div className="mt-10 sm:mt-14">
-            <ContactForm />
+            <Suspense fallback={<div className="text-white/30 text-center py-10">Cargando formulario...</div>}>
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </section>

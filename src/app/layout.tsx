@@ -1,36 +1,49 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import PageTransition from '@/components/PageTransition';
-import JsonLd from '@/components/JsonLd';
+import { Outfit, Jost, Inter } from 'next/font/google';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import PageTransition from '@/components/layout/PageTransition';
+import JsonLd from '@/components/ui/JsonLd';
 import { siteConfig } from '@/lib/config';
-import { LABELS } from '@/lib/constants';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const outfit = Outfit({
   subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const jost = Jost({
   subsets: ['latin'],
+  variable: '--font-jost',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${LABELS.meta.titleSuffix}`,
+    default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: './',
+  },
+  icons: {
+    icon: '/assets/icon.svg',
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    url: siteConfig.url,
+    url: './',
     siteName: siteConfig.name,
-    images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
     locale: 'es_CO',
     type: 'website',
   },
@@ -46,6 +59,20 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/assets/logo-trengie.svg`,
+  description: siteConfig.description,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Medellín',
+    addressCountry: 'CO',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,8 +80,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <JsonLd />
+      <body className={`${outfit.variable} ${jost.variable} ${inter.variable} font-inter antialiased`}>
+        <JsonLd data={organizationData} />
         <Header />
         <main>
           <PageTransition>{children}</PageTransition>

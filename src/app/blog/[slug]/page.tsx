@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllSlugs, getAllPosts } from '@/lib/blog';
-import BrandImage from '@/components/BrandImage';
-import BlogCard from '@/components/BlogCard';
+import BrandImage from '@/components/ui/BrandImage';
+import BlogCard from '@/components/features/BlogCard';
 
 interface Props {
     params: Promise<{ slug: string }>;

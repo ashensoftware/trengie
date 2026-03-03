@@ -2,66 +2,112 @@
   {
     "title": "Sistemas de Señalización Ferroviaria",
     "slug": "sistemas-de-senalizacion",
+    "highlight": true,
+    "idealFor": "Operadores de Metro, Tren Ligero y Redes Ferroviarias Nacionales.",
+    "impact": "Aumento del 30% en capacidad de línea y seguridad SIL4 certificada.",
+    "problemSolved": "Garantiza interoperabilidad y seguridad funcional en redes de metro, tren ligero y ferrocarriles.",
     "summary": "Optimización de sistemas de señalización para metro, tren ligero y ferrocarriles, garantizando interoperabilidad y seguridad funcional bajo normas internacionales (CENELEC).",
     "icon": "cpu",
     "image": "/images/services/senalizacion.jpg",
     "features": [
       "Integración de sistemas CCS (SCADA, ATS)",
       "Implementación de RAMS (EN 50126/28/29)",
-      "Pruebas, interoperabilidad y puesta en marcha",
-      "Auditorías y diagnósticos técnicos"
+      "Pruebas, interoperabilidad y puesta en marcha"
+    ],
+    "technologies": [
+      "ETCS",
+      "CBTC",
+      "SCADA",
+      "ATS",
+      "CENELEC"
     ]
   },
   {
     "title": "Ingeniería Eléctrica y Energías Aplicadas",
     "slug": "ingenieria-electrica",
+    "idealFor": "Empresas constructoras de infraestructura y gestores de red eléctrica.",
+    "impact": "Reducción de pérdidas energéticas en un 15% mediante control inteligente.",
+    "problemSolved": "Diseño e implementación de sistemas eléctricos industriales y ferroviarios en media y alta tensión.",
     "summary": "Diseño e implementación de sistemas eléctricos en media y alta tensión, electrificación ferroviaria y control de energía en tiempo real (SCADA).",
     "icon": "bolt",
     "image": "/images/services/electrification.jpg",
     "features": [
       "Electrificación ferroviaria (catenaria, tercer riel)",
       "Subestaciones de tracción y distribución",
-      "Integración con energías renovables",
-      "Optimización de consumos energéticos"
+      "Integración con energías renovables"
+    ],
+    "technologies": [
+      "SCADA",
+      "MT/AT",
+      "Catenaria",
+      "IEEE",
+      "IEC"
     ]
   },
   {
     "title": "Telecomunicaciones para Infraestructura",
     "slug": "telecomunicaciones",
+    "idealFor": "Centros de Control, Redes de Emergencia e Infraestructura Crítica.",
+    "impact": "Disponibilidad del 99.999% en comunicaciones críticas tren-tierra.",
+    "problemSolved": "Comunicaciones críticas y redundantes para operación segura de redes de transporte.",
     "summary": "Soluciones de comunicaciones críticas para transporte ferroviario y urbano, incluyendo redes de fibra óptica, IP redundante y comunicaciones tren-tierra.",
     "icon": "wifi",
     "image": "/images/services/telecom.jpg",
     "features": [
       "Redes críticas de fibra óptica e IP",
       "Comunicaciones tren-tierra (TETRA, LTE-R, FRMCS)",
-      "Sistemas ITS y análisis de video",
       "Centros de control y NOC"
+    ],
+    "technologies": [
+      "TETRA",
+      "LTE-R",
+      "FRMCS",
+      "FO",
+      "IP/MPLS"
     ]
   },
   {
     "title": "Material Rodante (Trenes)",
     "slug": "material-rodante",
+    "idealFor": "Fabricantes de trenes (OEMs) y Operadores de Flotas.",
+    "impact": "Optimización del ciclo de vida del activo (LCC) en un 20%.",
+    "problemSolved": "Montaje, integración y mantenimiento integral de flotas para operación confiable.",
     "summary": "Servicios integrales de montaje, integración de equipos embarcados, pruebas y mantenimiento preventivo/correctivo para flotas de trenes.",
     "icon": "train",
     "image": "/images/services/trenes.jpg",
     "features": [
       "Montaje y ensamblaje de trenes",
       "Instalación de equipos (ETCS, CBTC, ATP)",
-      "Pruebas estáticas y dinámicas",
-      "Retrofit y modernización de flotas"
+      "Pruebas estáticas y dinámicas"
+    ],
+    "technologies": [
+      "ETCS",
+      "CBTC",
+      "ATP",
+      "GoA4",
+      "RAMS"
     ]
   },
   {
     "title": "Consultoría y Gerencia de Proyectos",
     "slug": "consultoria-gerencia",
+    "highlight": false,
+    "idealFor": "Entidades Gubernamentales, Bancos de Desarrollo y consorcios EPC.",
+    "impact": "Mitigación de riesgos contractuales y cumplimiento de plazos en hitos críticos.",
+    "problemSolved": "Coordinación multidisciplinaria desde factibilidad hasta puesta en servicio de infraestructura compleja.",
     "summary": "Coordinación multidisciplinaria para proyectos complejos, abarcando desde estudios de factibilidad hasta la gerencia integral de obra y gestión contractual.",
     "icon": "clipboard",
     "image": "/images/services/gerencia.jpg",
     "features": [
       "Estudios de factibilidad técnica y económica",
       "Gerencia de obra y control de calidad",
-      "Gestión contractual y de riesgos",
-      "Acompañamiento en licitaciones y PMO"
+      "Gestión contractual, riesgos y PMO"
+    ],
+    "technologies": [
+      "PMO",
+      "BIM",
+      "ISO 9001",
+      "PMBOK"
     ]
   }
 ]

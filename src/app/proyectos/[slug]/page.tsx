@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import BrandImage from '@/components/BrandImage';
+import BrandImage from '@/components/ui/BrandImage';
 import type { Proyecto } from '@/lib/types';
 import { ROUTES, LABELS } from '@/lib/constants';
 import proyectos from '@/data/proyectos.json';

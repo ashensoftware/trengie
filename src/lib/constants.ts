@@ -1,8 +1,11 @@
 export const ASSETS = {
-    logo: '/assets/logo-trengie.png',
-    logoLight: '/assets/logo-trengie-light.png',
+    logo: '/assets/logo-trengie.svg', // Legacy reference
+    logoWhite: '/assets/logo-white.svg',
+    logoDark: '/assets/logo-dark.svg',
     heroBg: '/images/hero-bg.jpg',
     ogImage: '/og.png',
+    mision: '/images/corporate/mision.jpg',
+    vision: '/images/corporate/vision.jpg',
 } as const;
 
 
@@ -34,17 +37,27 @@ export const FOOTER_SERVICES = [
 
 export const LABELS = {
     cta: {
-        cotizar: 'Cotizar proyecto',
-        solicitarConsultoria: 'Solicitar Consultoría',
-        verProyectos: 'Ver Proyectos',
-        enviarSolicitud: 'Enviar Solicitud',
+        contacto: 'Hable con nosotros',
+        cotizar: 'Cotizar presupuesto',
+        enviar: 'Enviar mensaje',
         enviando: 'Enviando...',
+        enviarSolicitud: 'Enviar solicitud técnica',
+        verProyectos: 'Ver portafolio',
+        verServicios: 'Ver alcances técnicos',
+        hablarExperto: 'Hablar con un experto',
+        agendarReunion: 'Agendar reunión',
+        suscribirse: 'Suscribirse al Hub',
+        verAlcance: 'Ver detalles técnicos',
         solicitarInfo: 'Solicitar información',
-        agendarReunion: 'Solicitar reunión con nuestro equipo técnico',
         volverInicio: 'Volver al inicio',
         volverProyectos: 'Volver a proyectos',
-        verTodosProyectos: 'Ver todos los proyectos →',
-        preinscribirse: 'Preinscribirse',
+    },
+    hero: {
+        label: 'Ingeniería & Consultoría',
+        title: 'Ingeniería ferroviaria y gestión de proyectos',
+        highlight: '',
+        titleEnd: '',
+        subtitle: 'Señalización, electrificación, telecomunicaciones y material rodante con estándares internacionales.',
     },
     sections: {
         servicios: 'Servicios',
@@ -61,6 +74,14 @@ export const LABELS = {
         resultados: 'Resultados',
         galeria: 'Galería',
         knowledgeHub: 'Knowledge Hub',
+        comoTrabajamos: 'Cómo trabajamos',
+        metodologia: 'Metodología',
+        capacidades: 'Capacidades clave',
+        tipoServicio: 'Tipo de servicio',
+        etapaProyecto: 'Etapa del proyecto',
+        tecnologias: 'Tecnologías',
+        quePasaDespues: '¿Qué pasa después?',
+        faq: 'Preguntas frecuentes',
     },
     headings: {
         servicios: 'Módulos de servicio',
@@ -69,16 +90,12 @@ export const LABELS = {
         contacto: 'Hablemos de su proyecto',
         nuestrosServicios: 'Nuestros Servicios',
         nuestraHistoria: 'Nuestra historia',
-    },
-    hero: {
-        label: 'Ingeniería y Gestión de Proyectos',
-        titleStart: 'Infraestructura ferroviaria que',
-        titleHighlight: 'mueve',
-        titleEnd: 'el desarrollo',
-        subtitle:
-            'Excelencia técnica, ejecución eficiente y capacidad demostrada para abordar proyectos complejos que requieren coordinación multidisciplinar.',
+        mision: 'Misión',
+        vision: 'Visión',
+        comoTrabajamos: 'Cómo trabajamos',
     },
     subtitles: {
+        proyectos: 'Explora nuestra trayectoria en interventoría, diseño y estructuración de sistemas ferroviarios complejos.',
         servicios:
             'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         serviciosDetalle:
@@ -86,7 +103,7 @@ export const LABELS = {
         serviciosPage:
             'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         nosotros:
-            'Más de 15 años conectando sistemas, territorios e industrias mediante ingeniería especializada y gerencia ágil.',
+            'Más de 20 años conectando sistemas, territorios e industrias mediante ingeniería especializada y gerencia ágil.',
         contacto:
             'Estamos disponibles para discutir sus necesidades de infraestructura ferroviaria. Elija el canal que prefiera para comunicarse con nosotros.',
         blog: 'Artículos, análisis y tendencias del sector ferroviario e infraestructura de transporte.',
@@ -102,12 +119,26 @@ export const LABELS = {
         empresa: 'Empresa',
         correo: 'Correo electrónico',
         mensaje: 'Mensaje',
+        tipoServicio: 'Tipo de servicio',
+        etapaProyecto: 'Etapa del proyecto',
         placeholderNombre: 'Su nombre',
         placeholderEmpresa: 'Su empresa',
         placeholderCorreo: 'correo@empresa.com',
         placeholderMensaje: 'Cuéntenos sobre su proyecto...',
+        placeholderServicio: 'Seleccione un servicio',
+        placeholderEtapa: 'Seleccione la etapa',
         successMsg: '¡Mensaje enviado! Redirigiendo...',
         errorMsg: 'Hubo un error. Intente de nuevo.',
+        microcopy: 'Respondemos en menos de 24 horas',
+        proceso: [
+            { title: 'Respuesta rápida', desc: 'Le contactamos en menos de 24 horas hábiles.' },
+            { title: 'Llamada técnica', desc: 'Agendamos una sesión de 30 min para entender su necesidad.' },
+            { title: 'Propuesta técnica', desc: 'Entregamos una solución preliminar y presupuesto estimado.' },
+        ],
+        faqs: [
+            { q: '¿Tienen cobertura internacional?', a: 'Sí, ejecutamos proyectos en múltiples países cumpliendo normativas locales e internacionales.' },
+            { q: '¿Qué estándares de calidad siguen?', a: 'Trabajamos bajo normas ISO 9001 y normativas técnicas específicas como CENELEC para trenes.' },
+        ]
     },
     errors: {
         paginaNoEncontrada: 'Página no encontrada',
@@ -138,5 +169,12 @@ export const LABELS = {
         navPrincipal: 'Navegación principal',
         abrirMenu: 'Abrir menú',
         cerrarMenu: 'Cerrar menú',
+    },
+    nav: {
+        proyectos: 'Proyectos',
+        servicios: 'Servicios',
+        nosotros: 'Nosotros',
+        blog: 'Blog',
+        contacto: 'Contacto',
     },
 } as const;

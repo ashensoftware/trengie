@@ -1,0 +1,24 @@
+{
+    "serviceOptions": [
+        "Señalización Ferroviaria",
+        "Ingeniería Eléctrica",
+        "Telecomunicaciones",
+        "Material Rodante",
+        "Consultoría y Gerencia",
+        "Otro"
+    ],
+    "stageOptions": [
+        "Factibilidad",
+        "Diseño",
+        "Ejecución",
+        "Mantenimiento",
+        "Otro"
+    ],
+    "slugToService": {
+        "sistemas-de-senalizacion": "Señalización Ferroviaria",
+        "ingenieria-electrica": "Ingeniería Eléctrica",
+        "telecomunicaciones": "Telecomunicaciones",
+        "material-rodante": "Material Rodante",
+        "consultoria-gerencia": "Consultoría y Gerencia"
+    }
+}

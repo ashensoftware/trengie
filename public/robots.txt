@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trengie.com/sitemap.xml

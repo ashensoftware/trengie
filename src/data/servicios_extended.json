@@ -1,0 +1,159 @@
+{
+    "sistemas-de-senalizacion": {
+        "heroSubtitle": "Diseño, implementación e integración de sistemas de señalización y control de trenes bajo estándares CENELEC para metro, tren ligero y redes ferroviarias nacionales.",
+        "sections": [
+            {
+                "heading": "Señalización y Control de Trenes",
+                "body": "Implementamos soluciones de señalización tipo CBTC y ETCS de nivel 1 y 2, incluyendo sistemas ATP, ATO y ATS. Nuestro equipo gestiona la integración de sistemas de enclavamiento, controladores de zona y la puesta en servicio con pruebas de seguridad funcional SIL4."
+            },
+            {
+                "heading": "RAMS y Seguridad Funcional",
+                "body": "Realizamos análisis de Confiabilidad, Disponibilidad, Mantenibilidad y Seguridad (RAMS) bajo las normas EN 50126, EN 50128 y EN 50129. Llevamos a cabo evaluaciones de riesgo, hazard logs y verificación independiente de seguridad (ISA)."
+            },
+            {
+                "heading": "Integración SCADA y CCS",
+                "body": "Diseñamos e integramos sistemas de supervisión y control (SCADA) con el Centro de Control de Sistemas (CCS), garantizando la gestión centralizada de tráfico, energía y telecomunicaciones ferroviarias en tiempo real."
+            }
+        ],
+        "deliverables": [
+            "Ingeniería conceptual, básica y de detalle de sistemas de señalización",
+            "Supervisión de pruebas FAT/SAT e integración",
+            "Puesta en servicio y pruebas dinámicas",
+            "Documentación RAMS y expediente de seguridad",
+            "Capacitación y transferencia de conocimiento"
+        ],
+        "standards": [
+            "CENELEC EN 50126",
+            "EN 50128",
+            "EN 50129",
+            "ERTMS/ETCS",
+            "CBTC GoA2/GoA4",
+            "IEC 62278"
+        ]
+    },
+    "ingenieria-electrica": {
+        "heroSubtitle": "Diseño e implementación de sistemas eléctricos de media y alta tensión para infraestructura ferroviaria y de transporte, incluyendo subestaciones, catenaria y SCADA de energía.",
+        "sections": [
+            {
+                "heading": "Subestaciones y Electrificación",
+                "body": "Diseñamos, supervisamos y comisionamos subestaciones de tracción de media tensión y corriente continua (750V/1500V), incluyendo alimentación eléctrica, protecciones, sistemas de puesta a tierra y compatibilidad electromagnética."
+            },
+            {
+                "heading": "Catenaria y Tercer Riel",
+                "body": "Especificamos, montamos y ponemos a punto sistemas de electrificación tipo catenaria compuesta y rígida, así como sistemas de tercer riel. Experiencia directa en montaje con personal local en proyectos como el Tranvía de Ayacucho y Metro de Medellín."
+            },
+            {
+                "heading": "SCADA de Energía",
+                "body": "Implementamos sistemas de supervisión, control y adquisición de datos (SCADA) para la gestión energética en tiempo real de la infraestructura ferroviaria, integrando subestaciones, alimentación de tracción y monitoreo de consumos."
+            }
+        ],
+        "deliverables": [
+            "Diseño preliminar y de detalle de subestaciones de tracción",
+            "Montaje y puesta a punto de catenaria",
+            "Integración de SCADA de energía",
+            "Pruebas de protecciones y secuencias",
+            "Compatibilidad electromagnética (EMC)"
+        ],
+        "standards": [
+            "IEC 61850",
+            "IEEE 519",
+            "EN 50122",
+            "EN 50163",
+            "RETIE Colombia"
+        ]
+    },
+    "telecomunicaciones": {
+        "heroSubtitle": "Soluciones de comunicaciones críticas para transporte ferroviario y urbano, con redes de fibra óptica redundante, sistemas tren-tierra y centros de control operacional.",
+        "sections": [
+            {
+                "heading": "Redes de Fibra Óptica e IP/MPLS",
+                "body": "Diseñamos e implementamos redes de telecomunicaciones de alta disponibilidad basadas en fibra óptica y arquitectura IP/MPLS, con redundancia geográfica y lógica para garantizar la continuidad del servicio."
+            },
+            {
+                "heading": "Comunicaciones Tren-Tierra",
+                "body": "Implementamos sistemas de comunicaciones críticas entre el tren y la infraestructura fija, incluyendo tecnologías TETRA, LTE-R ferroviario y FRMCS (Future Railway Mobile Communication System), cumpliendo estándares de disponibilidad del 99.999%."
+            },
+            {
+                "heading": "Centros de Control (OCC/NOC)",
+                "body": "Diseñamos la arquitectura e integramos los sistemas del Centro de Control de Operaciones (OCC), incluyendo gestión de tráfico, CCTV, megafonía, información al viajero y sistemas de emergencia, garantizando interoperabilidad entre subsistemas."
+            }
+        ],
+        "deliverables": [
+            "Diseño de redes de telecomunicaciones ferroviarias",
+            "Implementación de sistemas TETRA and LTE-R",
+            "Integración del Centro de Control (OCC)",
+            "Pruebas de cobertura y disponibilidad",
+            "Ciberseguridad y gestión de riesgos"
+        ],
+        "standards": [
+            "TETRA",
+            "LTE-R",
+            "FRMCS",
+            "IEC 62280",
+            "EN 50159",
+            "ISO 27001"
+        ]
+    },
+    "material-rodante": {
+        "heroSubtitle": "Servicios integrales de montaje, integración de equipos embarcados y mantenimiento de flotas para operación ferroviaria confiable y optimización del ciclo de vida del activo.",
+        "sections": [
+            {
+                "heading": "Montaje y Ensamblaje",
+                "body": "Participamos en el montaje e integración de trenes, incluyendo la instalación de equipos embarcados de señalización (ETCS, CBTC), sistemas de tracción, frenado, HVAC y puertas. Experiencia directa con fabricantes como CRRC Changchun."
+            },
+            {
+                "heading": "Pruebas y Homologación",
+                "body": "Ejecutamos protocolos de pruebas estáticas y dinámicas, incluyendo pruebas de tipo, pruebas de serie, FAT en fábrica y SAT en vía. Acompañamos el proceso de homologación y obtención de la certificación de puesta en servicio."
+            },
+            {
+                "heading": "Mantenimiento y LCC",
+                "body": "Planificamos estrategias de mantenimiento preventivo, predictivo y correctivo con enfoque en la optimización del Costo de Ciclo de Vida (LCC). Implementamos metodologías RCM2 y análisis de fallas sistemáticas."
+            }
+        ],
+        "deliverables": [
+            "Supervisión de montaje e integración de equipos",
+            "Protocolos de pruebas estáticas y dinámicas",
+            "Plan de mantenimiento integral",
+            "Análisis LCC y optimización de flota",
+            "Capacitación a personal operativo"
+        ],
+        "standards": [
+            "EN 15085",
+            "EN 50155",
+            "UIC 515-4",
+            "IEC 62267",
+            "RAMS EN 50126"
+        ]
+    },
+    "consultoria-gerencia": {
+        "heroSubtitle": "Coordinación multidisciplinaria para megaproyectos de infraestructura, desde estudios de factibilidad hasta la gerencia integral de obra, gestión contractual y PMO.",
+        "sections": [
+            {
+                "heading": "Estudios de Factibilidad",
+                "body": "Elaboramos estudios de factibilidad técnica y económica para proyectos de infraestructura de transporte. Evaluamos alternativas tecnológicas, estimamos costos de inversión y operación, y definimos el modelo de negocio y la estructura contractual."
+            },
+            {
+                "heading": "Gerencia de Proyectos y PMO",
+                "body": "Implementamos oficinas de gestión de proyectos (PMO) con metodologías PMBOK, gestionando alcance, cronograma, costos, riesgos y calidad. Coordinamos la interacción entre el cliente, contratistas, consultores e interventoría."
+            },
+            {
+                "heading": "Estructuración Técnica y Contractual",
+                "body": "Elaboramos la documentación técnica para licitaciones públicas internacionales, incluyendo especificaciones técnicas, términos de referencia, matrices de riesgos y criterios de evaluación. Experiencia en estructuración con aval de banca multilateral."
+            }
+        ],
+        "deliverables": [
+            "Estudios de factibilidad técnica y económica",
+            "Documentación para licitación pública internacional",
+            "Plan de gestión del proyecto (cronograma, riesgos, calidad)",
+            "Informes de supervisión y avance",
+            "Gestión contractual y resolución de controversias"
+        ],
+        "standards": [
+            "PMBOK",
+            "ISO 21500",
+            "ISO 9001",
+            "BIM",
+            "NEC Colombia"
+        ]
+    }
+}

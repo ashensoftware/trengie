@@ -2,10 +2,15 @@ export interface Servicio {
     title: string;
     slug: string;
     summary: string;
+    problemSolved?: string;
     icon: string;
     image?: string;
     features: string[];
+    technologies?: string[];
     cta?: string;
+    highlight?: boolean;
+    idealFor?: string;
+    impact?: string;
 }
 
 export interface Proyecto {

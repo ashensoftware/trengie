@@ -1,96 +1,107 @@
 [
     {
-        "title": "Metro Línea 2 — Bogotá",
-        "slug": "metro-linea-2-bogota",
-        "category": "Interventoría",
+        "title": "Metro de la 80",
+        "slug": "metro-de-la-80-medellin",
+        "category": "Ingeniería Ferroviaria",
         "year": 2023,
-        "location": "Bogotá, Colombia",
-        "cover": "/images/projects/metro-bogota.jpg",
-        "summary": "Supervisión técnica de 12 estaciones del sistema Metro de Bogotá, asegurando cumplimiento de estándares internacionales de calidad y seguridad.",
-        "scope": "Supervisión técnica de 12 estaciones",
-        "role": "Interventoría integral",
-        "results": "100% cumplimiento normativo",
-        "images": [
-            "/images/projects/metro-bogota-1.jpg",
-            "/images/projects/metro-bogota-2.jpg",
-            "/images/projects/metro-bogota-3.jpg"
-        ]
-    },
-    {
-        "title": "Puente Ferroviario Río Magdalena",
-        "slug": "puente-ferroviario-rio-magdalena",
-        "category": "Ejecución",
-        "year": 2022,
-        "location": "Barrancabermeja, Colombia",
-        "cover": "/images/projects/puente-magdalena.jpg",
-        "summary": "Dirección técnica y gestión integral de la construcción del puente ferroviario sobre el Río Magdalena, conectando dos corredores logísticos estratégicos.",
-        "scope": "Construcción de puente ferroviario de 450m",
-        "role": "Dirección técnica",
-        "results": "Entrega anticipada en 8 meses",
-        "images": [
-            "/images/projects/puente-magdalena-1.jpg",
-            "/images/projects/puente-magdalena-2.jpg"
-        ]
-    },
-    {
-        "title": "Centro de Control Operacional",
-        "slug": "centro-control-operacional",
-        "category": "Estructuración",
-        "year": 2024,
         "location": "Medellín, Colombia",
-        "cover": "/images/projects/centro-control.jpg",
-        "summary": "Estructuración y diseño conceptual del centro de control operacional para la red de transporte masivo, integrando sistemas de monitoreo en tiempo real.",
-        "scope": "Diseño integral de centro de control",
-        "role": "Estructuración técnica",
-        "results": "Integración de 5 líneas de transporte",
+        "cover": "/images/projects/metro-de-la-80-medellin/metro-80-medellin.jpg",
+        "summary": "Diseño preliminar y detallado de los sistemas de Subestaciones, Catenaria, SCADA, Señalización, Control de Trenes y Sistema Contra Incendios para un corredor de Metro Ligero de 13.25 km en doble vía con 17 estaciones.",
+        "scope": "Diseño integral de sistemas electromecánicos, energía, y control",
+        "role": "Responsabilidad Técnica y Diseño",
+        "results": "Optimización del 20% en costos de infraestructura mediante ingeniería de valor.",
         "images": [
-            "/images/projects/centro-control-1.jpg",
-            "/images/projects/centro-control-2.jpg"
+            "/images/projects/metro-de-la-80-medellin/metro-80-medellin-1.jpg"
         ]
     },
     {
-        "title": "Corredor Férreo del Pacífico",
-        "slug": "corredor-ferreo-pacifico",
-        "category": "Interventoría",
-        "year": 2023,
-        "location": "Valle del Cauca, Colombia",
-        "cover": "/images/projects/corredor-pacifico.jpg",
-        "summary": "Interventoría técnica para la rehabilitación de 150km del corredor férreo que conecta Buenaventura con el interior del país.",
-        "scope": "Rehabilitación de 150km de vía férrea",
-        "role": "Interventoría técnica",
-        "results": "Reducción del 35% en tiempos de transporte",
+        "title": "Primera Línea del Metro de Bogotá",
+        "slug": "primera-linea-metro-bogota",
+        "category": "Interventoría e Ingeniería",
+        "year": 2018,
+        "location": "Bogotá, Colombia",
+        "cover": "/images/projects/primera-linea-metro-bogota/metro-bogota-plmb.jpg",
+        "summary": "Supervisión técnica, estructuración y revisión de la ingeniería de detalle y básica para el primer sistema de Metro automático en Colombia en su primera Línea de 24 km en doble vía con 16 estaciones.",
+        "scope": "Material Rodante y todos los subsistemas ferroviarios (Energía, Señalización, Telecom, CBTC GoA4, RAMS)",
+        "role": "Supervisión de Contratos y Revisión Técnica",
+        "results": "Garantía de cumplimiento SIL4 en todos los sistemas de seguridad crítica.",
         "images": [
-            "/images/projects/corredor-pacifico-1.jpg"
+            "/images/projects/primera-linea-metro-bogota/metro-bogota-plmb-1.jpg"
+        ]
+    },
+    {
+        "title": "Segunda Línea del Metro de Bogotá",
+        "slug": "segunda-linea-metro-bogota",
+        "category": "Estructuración Técnica",
+        "year": 2018,
+        "location": "Bogotá, Colombia",
+        "cover": "/images/projects/segunda-linea-metro-bogota/metro-bogota-l2.jpg",
+        "summary": "Estructuración y ejecución de la factibilidad para la construcción de la segunda línea de Metro automático para un corredor urbano de 15.5 km con 11 estaciones, un Patio Taller, OCC y 25 trenes.",
+        "scope": "Estudios de factibilidad técnica",
+        "role": "Estructuración de Documentación",
+        "results": "Viabilidad técnica aprobada para inversión internacional de gran escala.",
+        "images": [
+            "/images/projects/segunda-linea-metro-bogota/metro-bogota-l2.jpg"
         ]
     },
     {
         "title": "Tranvía de Ayacucho",
         "slug": "tranvia-ayacucho",
-        "category": "Ejecución",
-        "year": 2022,
+        "category": "Ejecución y Mantenimiento",
+        "year": 2013,
         "location": "Medellín, Colombia",
-        "cover": "/images/projects/tranvia-ayacucho.jpg",
-        "summary": "Gestión técnica de la extensión del sistema tranviario, incluyendo nuevas estaciones y optimización de la operación existente.",
-        "scope": "Extensión de 4.3km de línea tranviaria",
-        "role": "Gestión técnica integral",
-        "results": "45,000 usuarios diarios beneficiados",
+        "cover": "/images/projects/tranvia-ayacucho/tranvia-ayacucho-real.jpg",
+        "summary": "Diseño, construcción, montaje y puesta a punto del sistema de alimentación eléctrica (Subestaciones y Catenaria) e inspección de Señalización para el corredor urbano de 4.2 km en vía doble con 9 estaciones.",
+        "scope": "Suministro, montaje y pruebas de energía y señalización",
+        "role": "Coordinación de Montaje y Supervisión",
+        "results": "Incremento del 25% en la eficiencia energética de la red de tracción.",
         "images": [
-            "/images/projects/tranvia-ayacucho-1.jpg"
+            "/images/projects/tranvia-ayacucho/tranvia-ayacucho-real-1.jpg"
         ]
     },
     {
-        "title": "Sistema Ferroviario Regional Norte",
-        "slug": "ferroviario-regional-norte",
-        "category": "Estructuración",
-        "year": 2024,
-        "location": "Cundinamarca, Colombia",
-        "cover": "/images/projects/ferroviario-norte.jpg",
-        "summary": "Estudios de factibilidad y diseño conceptual para el sistema ferroviario regional que conectará municipios del norte de Cundinamarca con Bogotá.",
-        "scope": "Estudio de factibilidad para 85km",
-        "role": "Estructuración y estudios",
-        "results": "Viabilidad técnica y financiera aprobada",
+        "title": "Tren de Alta Velocidad Lima - Barranca",
+        "slug": "tren-alta-velocidad-lima-barranca",
+        "category": "Estructuración Ferroviaria",
+        "year": 2025,
+        "location": "Lima, Perú",
+        "cover": "/images/projects/tren-alta-velocidad-lima-barranca/tren-lima-barranca.jpg",
+        "summary": "Estudio de factibilidad para el Tren de alta velocidad Lima-Barranca de 250 km de longitud, 26 estaciones, con velocidad máxima de 200 km/h y demanda de 280,000 pasajeros diarios.",
+        "scope": "Factibilidad y coordinación de sistemas ferroviarios, RAMS y operaciones",
+        "role": "Líder de Sistemas e Integración",
+        "results": "Reducción estimada del 40% en tiempos de viaje interurbano.",
         "images": [
-            "/images/projects/ferroviario-norte-1.jpg"
+            "/images/projects/tren-alta-velocidad-lima-barranca/tren-lima-barranca.jpg"
+        ]
+    },
+    {
+        "title": "Primera Línea del Metro de Quito",
+        "slug": "primera-linea-metro-quito",
+        "category": "Consultoría Técnica",
+        "year": 2022,
+        "location": "Quito, Ecuador",
+        "cover": "/images/projects/primera-linea-metro-quito/metro-quito.jpg",
+        "summary": "Consultoría técnica especializada para la estructuración técnica de la operación y el mantenimiento de la Primera Línea del Metro de Quito, brindando asesoría integral a la EPMMQ.",
+        "scope": "Documentación estratégica, O&M de sistemas metro ferroviarios",
+        "role": "Experto Ferroviario en O&M",
+        "results": "Aseguramiento del 100% en disponibilidad operacional para el inicio de servicio.",
+        "images": [
+            "/images/projects/primera-linea-metro-quito/metro-quito-1.jpg"
+        ]
+    },
+    {
+        "title": "Regiotram de Occidente",
+        "slug": "regiotram-occidente",
+        "category": "Interventoría Técnica",
+        "year": 2022,
+        "location": "Cundinamarca, Colombia",
+        "cover": "/images/projects/regiotram-occidente/regiotram-occidente.jpg",
+        "summary": "Evaluación técnica de especificaciones para los sistemas de energía, catenaria, material rodante y equipos de taller, así como líder de integración e interfaces del corredor de 45 km.",
+        "scope": "Interventoría y supervisión del cumplimiento normativo y RAMS",
+        "role": "Especialista en Interfaces Ferroviarias",
+        "results": "Mitigación total de riesgos de incompatibilidad entre subsistemas críticos.",
+        "images": [
+            "/images/projects/regiotram-occidente/regiotram-occidente-1.jpg"
         ]
     }
 ]
