@@ -1,8 +1,8 @@
 import type { Stat, Value, NormativeReference, ContactChannel } from '@/lib/types';
 
 export const heroStats: Stat[] = [
-    { value: '20+', label: 'Años de experiencia' },
-    { value: '50+', label: 'Proyectos ejecutados' },
+    { value: '20+', label: 'Años del equipo en el sector' },
+    { value: '50+', label: 'Proyectos del equipo' },
     { value: '3', label: 'Países con operación' },
 ];
 
@@ -61,7 +61,7 @@ export const contactChannels: ContactChannel[] = [
 
 export const companyDescription = {
     intro:
-        'Trengie es una compañía de ingeniería y gestión de proyectos especializada en Material Rodante y Sistemas Metroferroviarios, con un equipo multidisciplinario que suma más de 20 años de experiencia en el sector ferroviario colombiano y latinoamericano.',
+        'Trengie es una compañía de ingeniería y gestión de proyectos especializada en Material Rodante y Sistemas Metroferroviarios. Nuestro equipo multidisciplinario suma más de 20 años de experiencia en el sector ferroviario colombiano y latinoamericano y ha participado en decenas de proyectos en la región.',
     detail:
         'Acompañamos a operadores, contratistas, entidades públicas y privadas en todas las etapas del proyecto: preconstrucción, construcción, pruebas y puesta en servicio, operación y mantenimiento. Integramos innovación tecnológica y mejores prácticas internacionales para garantizar soluciones sostenibles, seguras y de alto desempeño.',
     mission:
@@ -89,9 +89,9 @@ export const methodology = [
 ];
 
 export const capabilities = [
-    { value: '20+', label: 'Años de Experiencia' },
-    { value: '50+', label: 'Proyectos Ejecutados' },
-    { value: '3', label: 'Países con Operación' },
+    { value: '20+', label: 'Años del equipo en el sector' },
+    { value: '50+', label: 'Proyectos del equipo' },
+    { value: '3', label: 'Países con operación' },
     { value: '100%', label: 'Cumplimiento RAMS' },
 ];
 

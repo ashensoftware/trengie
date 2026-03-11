@@ -104,7 +104,7 @@ export const LABELS = {
         serviciosPage:
             'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         nosotros:
-            'Más de 20 años conectando sistemas, territorios e industrias mediante ingeniería especializada y gerencia ágil.',
+            'Equipo multidisciplinar con más de 20 años en el sector ferroviario y trayectoria en proyectos en Colombia, Ecuador y la región.',
         contacto:
             'Estamos disponibles para discutir sus necesidades de infraestructura ferroviaria. Elija el canal que prefiera para comunicarse con nosotros.',
         blog: 'Artículos, análisis y tendencias del sector ferroviario e infraestructura de transporte.',
@@ -154,7 +154,7 @@ export const LABELS = {
         serviciosDesc:
             'Señalización, Ingeniería Eléctrica, Telecomunicaciones, Material Rodante y Gerencia de Proyectos para el sector ferroviario.',
         nosotrosDesc:
-            'Conoce a Trengie: excelencia técnica y ejecución eficiente en proyectos de infraestructura ferroviaria a nivel global.',
+            'Trengie: ingeniería y gestión de proyectos ferroviarios. Equipo con más de 20 años de experiencia en el sector y trayectoria en la región.',
         contactoDesc:
             'Hablemos de su proyecto. Soluciones técnicas con estándares internacionales y modelo ágil de trabajo.',
         blogDesc:

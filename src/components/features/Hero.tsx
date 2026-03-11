@@ -80,6 +80,9 @@ export default function Hero({
                         playsInline
                         aria-hidden
                         onEnded={handleVideoEnded}
+                        disablePictureInPicture
+                        disableRemotePlayback
+                        controlsList="nodownload nofullscreen noremoteplayback"
                     />
                 ) : (
                     <BrandImage
