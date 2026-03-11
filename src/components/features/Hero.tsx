@@ -31,7 +31,10 @@ export default function Hero({
     const [useVideo, setUseVideo] = useState(false);
     const [loopFading, setLoopFading] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const rafRef = useRef<number>(0);
 
     useEffect(() => {
         if (!backgroundVideo) return;
@@ -44,6 +47,7 @@ export default function Hero({
     useEffect(() => {
         return () => {
             if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
         };
     }, []);
 
@@ -60,30 +64,86 @@ export default function Hero({
         }, 320);
     };
 
-    const showVideo = backgroundVideo && useVideo;
+    const showVideo = Boolean(backgroundVideo && useVideo);
+
+    useEffect(() => {
+        if (!showVideo || !videoRef.current || !canvasRef.current || !containerRef.current) return;
+        const video = videoRef.current;
+        const canvas = canvasRef.current;
+        const container = containerRef.current;
+        let running = true;
+
+        const setCanvasSize = () => {
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            if (w && h && (canvas.width !== w || canvas.height !== h)) {
+                canvas.width = w;
+                canvas.height = h;
+            }
+        };
+        setCanvasSize();
+        const ro = new ResizeObserver(setCanvasSize);
+        ro.observe(container);
+
+        const draw = () => {
+            if (!running) return;
+            const ctx = canvas.getContext('2d');
+            if (!ctx || !video.videoWidth || !canvas.width) {
+                rafRef.current = requestAnimationFrame(draw);
+                return;
+            }
+            const cw = canvas.width;
+            const ch = canvas.height;
+            const vw = video.videoWidth;
+            const vh = video.videoHeight;
+            const scale = Math.max(cw / vw, ch / vh);
+            const dw = vw * scale;
+            const dh = vh * scale;
+            const x = (cw - dw) / 2;
+            const y = (ch - dh) / 2;
+            ctx.drawImage(video, 0, 0, vw, vh, x, y, dw, dh);
+            rafRef.current = requestAnimationFrame(draw);
+        };
+        draw();
+        return () => {
+            running = false;
+            ro.disconnect();
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, [showVideo]);
 
     return (
         <section className="relative flex w-full min-h-[100dvh] flex-col overflow-hidden bg-[#0c0e13]">
-            {/* Background media (image or optional video) with deeper overlay */}
-            <div className="absolute inset-0 pointer-events-none">
+            <div ref={containerRef} className="absolute inset-0 pointer-events-none">
                 {showVideo ? (
-                    <video
-                        ref={videoRef}
-                        className={`h-full w-full object-cover grayscale-[0.5] transition-opacity duration-300 ease-out ${
-                            loopFading ? 'opacity-0' : 'opacity-40'
-                        }`}
-                        src={backgroundVideo}
-                        poster={backgroundImage}
-                        preload="metadata"
-                        autoPlay
-                        muted
-                        playsInline
-                        aria-hidden
-                        onEnded={handleVideoEnded}
-                        disablePictureInPicture
-                        disableRemotePlayback
-                        controlsList="nodownload nofullscreen noremoteplayback"
-                    />
+                    <>
+                        <div className="absolute -left-[9999px] top-0 w-[1280px] h-[720px] overflow-hidden opacity-0 pointer-events-none" aria-hidden>
+                            <video
+                                ref={videoRef}
+                                width={1280}
+                                height={720}
+                                src={backgroundVideo}
+                                poster={backgroundImage}
+                                preload="auto"
+                                autoPlay
+                                muted
+                                playsInline
+                                aria-hidden
+                                onEnded={handleVideoEnded}
+                                onCanPlay={() => videoRef.current?.play().catch(() => {})}
+                                disablePictureInPicture
+                                disableRemotePlayback
+                                controlsList="nodownload nofullscreen noremoteplayback"
+                            />
+                        </div>
+                        <canvas
+                            ref={canvasRef}
+                            className={`absolute inset-0 w-full h-full object-cover grayscale-[0.5] transition-opacity duration-300 ease-out ${
+                                loopFading ? 'opacity-0' : 'opacity-40'
+                            }`}
+                            aria-hidden
+                        />
+                    </>
                 ) : (
                     <BrandImage
                         src={backgroundImage}
@@ -100,7 +160,6 @@ export default function Hero({
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e13] via-transparent to-transparent" />
             </div>
 
-            {/* Main Content (Centered in remaining space) */}
             <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pt-16 pb-8 sm:px-6">
                 <div className="max-w-3xl">
                     <span className="mb-6 inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-orange sm:text-xs">
@@ -112,7 +171,6 @@ export default function Hero({
                         {title}
                     </h1>
 
-                    {/* Slogan from Brand Manual */}
                     <div className="mt-4 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-white/30 sm:text-xs">
                         <span>engineering</span>
                         <span className="h-1 w-1 rounded-full bg-orange/40" />
@@ -148,11 +206,9 @@ export default function Hero({
                 </div>
             </div>
 
-            {/* Authority Trust Bar - Bottom Fixed Flow */}
             {showStats && heroStats.length > 0 && (
                 <div className="relative z-20 w-full border-t border-white/5 bg-[#1a1a1a]/60 backdrop-blur-md">
                     <div className="mx-auto max-w-7xl divide-y lg:divide-y-0 lg:divide-x divide-white/5 lg:flex lg:items-center">
-                        {/* Metrics Grid */}
                         <div className="grid grid-cols-2 sm:grid-cols-4 flex-1 lg:grid-cols-4 divide-x divide-white/5">
                             {heroStats.map((stat) => (
                                 <div key={stat.label} className="px-4 py-6 text-center sm:px-6 sm:py-8 transition-colors hover:bg-white/5">
@@ -166,7 +222,6 @@ export default function Hero({
                             ))}
                         </div>
 
-                        {/* Normativas de referencia (no claim de certificación) */}
                         <div className="bg-orange/5 px-6 py-4 lg:py-8 text-center lg:text-left lg:min-w-[300px] group transition-colors hover:bg-orange/10 flex flex-col justify-center">
                             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-orange mb-1 block">
                                 Normativas de referencia

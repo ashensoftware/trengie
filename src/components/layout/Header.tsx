@@ -4,7 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import BrandImage from '@/components/ui/BrandImage';
+import { Icons } from '@/components/ui/Icons';
 import { ASSETS, ROUTES, NAV_LINKS, LABELS } from '@/lib/constants';
+
+const NAV_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+    [ROUTES.servicios]: Icons.Bolt,
+    [ROUTES.proyectos]: Icons.Clipboard,
+    [ROUTES.sobreNosotros]: Icons.Users,
+    [ROUTES.blog]: Icons.DocumentText,
+    [ROUTES.contacto]: Icons.Mail,
+};
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,10 +40,10 @@ export default function Header() {
                 }`}
         >
             <nav
-                className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4"
+                className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
                 aria-label={LABELS.aria.navPrincipal}
             >
-                <Link href={ROUTES.home} className="relative h-8 w-28 sm:h-9 sm:w-32">
+                <Link href={ROUTES.home} className="relative h-9 w-28 min-w-0 flex-shrink sm:h-10 sm:w-32 lg:w-36">
                     <BrandImage
                         src={isTransparent ? ASSETS.logoWhite : ASSETS.logoDark}
                         alt="Trengie"
@@ -65,16 +74,9 @@ export default function Header() {
                     ))}
                 </ul>
 
-                <Link
-                    href={ROUTES.contacto}
-                    className="btn-primary hidden text-xs sm:text-sm lg:inline-flex"
-                >
-                    {LABELS.cta.cotizar}
-                </Link>
-
                 <button
                     type="button"
-                    className={`inline-flex items-center justify-center rounded-md p-2 transition-colors lg:hidden ${isTransparent ? 'text-white/80 hover:bg-white/10' : 'text-dune/70 hover:bg-grey/30'
+                    className={`relative z-10 shrink-0 inline-flex items-center justify-center rounded-md p-2 transition-colors lg:hidden ${isTransparent ? 'text-white/80 hover:bg-white/10' : 'text-dune/70 hover:bg-grey/30'
                         }`}
                     aria-label={mobileOpen ? LABELS.aria.cerrarMenu : LABELS.aria.abrirMenu}
                     aria-expanded={mobileOpen}
@@ -97,24 +99,30 @@ export default function Header() {
                     }`}
             >
                 <ul className="space-y-1 px-4 py-4 sm:px-6">
-                    {NAV_LINKS.map((link) => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${pathname === link.href
-                                    ? 'bg-orange/10 text-orange'
-                                    : 'text-dune/70 hover:bg-grey/20'
-                                    }`}
-                                onClick={() => setMobileOpen(false)}
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                        const Icon = NAV_ICONS[link.href];
+                        return (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    className={`flex items-center gap-3 rounded-md px-3 py-2.5 text-base font-medium transition-colors ${pathname === link.href
+                                        ? 'bg-orange/10 text-orange'
+                                        : 'text-dune/70 hover:bg-grey/20'
+                                        }`}
+                                    onClick={() => setMobileOpen(false)}
+                                >
+                                    {Icon && (
+                                        <Icon className="h-5 w-5 shrink-0 text-current opacity-70" />
+                                    )}
+                                    {link.label}
+                                </Link>
+                            </li>
+                        );
+                    })}
                     <li>
                         <Link
                             href={ROUTES.contacto}
-                            className="btn-primary mt-2 block w-full text-center"
+                            className="mt-3 inline-flex items-center gap-2 rounded-lg border border-orange/30 bg-orange/10 px-4 py-2 text-sm font-semibold text-orange transition-colors hover:bg-orange/20 hover:border-orange/50"
                             onClick={() => setMobileOpen(false)}
                         >
                             {LABELS.cta.cotizar}
