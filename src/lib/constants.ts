@@ -3,6 +3,7 @@ export const ASSETS = {
     logoWhite: '/assets/logo-white.svg',
     logoDark: '/assets/logo-dark.svg',
     heroBg: '/images/hero-bg.jpg',
+    heroVideo: '/videos/hero-background.mp4',
     ogImage: '/og.png',
     mision: '/images/corporate/mision.jpg',
     vision: '/images/corporate/vision.jpg',

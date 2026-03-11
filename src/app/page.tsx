@@ -8,7 +8,7 @@ import ContactForm from '@/components/features/ContactForm';
 import JsonLd from '@/components/ui/JsonLd';
 import { Icons } from '@/components/ui/Icons';
 import type { Servicio, Proyecto } from '@/lib/types';
-import { ROUTES, LABELS } from '@/lib/constants';
+import { ROUTES, LABELS, ASSETS } from '@/lib/constants';
 import { siteConfig } from '@/lib/config';
 import { companyDescription } from '@/data/site';
 import servicios from '@/data/servicios.json';
@@ -38,6 +38,7 @@ export default function HomePage() {
         label={LABELS.hero.label}
         title={LABELS.hero.title}
         subtitle={LABELS.hero.subtitle}
+        backgroundVideo={ASSETS.heroVideo}
         priority
       />
 

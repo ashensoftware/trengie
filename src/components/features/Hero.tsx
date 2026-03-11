@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import BrandImage from '@/components/ui/BrandImage';
 import { Icons } from '@/components/ui/Icons';
@@ -11,6 +12,7 @@ interface HeroProps {
     title?: string;
     subtitle?: string;
     backgroundImage?: string;
+    backgroundVideo?: string;
     showCtas?: boolean;
     showStats?: boolean;
     priority?: boolean;
@@ -21,24 +23,76 @@ export default function Hero({
     title = LABELS.hero.title,
     subtitle = LABELS.hero.subtitle,
     backgroundImage = ASSETS.heroBg,
+    backgroundVideo,
     showCtas = true,
     showStats = true,
     priority = false,
 }: HeroProps) {
+    const [useVideo, setUseVideo] = useState(false);
+    const [loopFading, setLoopFading] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+        if (!backgroundVideo) return;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
+        const id = requestAnimationFrame(() => setUseVideo(true));
+        return () => cancelAnimationFrame(id);
+    }, [backgroundVideo]);
+
+    useEffect(() => {
+        return () => {
+            if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+        };
+    }, []);
+
+    const handleVideoEnded = () => {
+        setLoopFading(true);
+        fadeTimeoutRef.current = setTimeout(() => {
+            const video = videoRef.current;
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(() => {});
+            }
+            setLoopFading(false);
+            fadeTimeoutRef.current = null;
+        }, 320);
+    };
+
+    const showVideo = backgroundVideo && useVideo;
+
     return (
         <section className="relative flex w-full min-h-[100dvh] flex-col overflow-hidden bg-[#0c0e13]">
-            {/* Background with deeper overlay */}
+            {/* Background media (image or optional video) with deeper overlay */}
             <div className="absolute inset-0 pointer-events-none">
-                <BrandImage
-                    src={backgroundImage}
-                    alt="Infraestructura ferroviaria"
-                    fill
-                    className="object-cover opacity-30 grayscale-[0.5]"
-                    fallbackWidth={1920}
-                    fallbackHeight={1080}
-                    fallbackLabel="Hero Background"
-                    priority={priority}
-                />
+                {showVideo ? (
+                    <video
+                        ref={videoRef}
+                        className={`h-full w-full object-cover grayscale-[0.5] transition-opacity duration-300 ease-out ${
+                            loopFading ? 'opacity-0' : 'opacity-40'
+                        }`}
+                        src={backgroundVideo}
+                        poster={backgroundImage}
+                        preload="metadata"
+                        autoPlay
+                        muted
+                        playsInline
+                        aria-hidden
+                        onEnded={handleVideoEnded}
+                    />
+                ) : (
+                    <BrandImage
+                        src={backgroundImage}
+                        alt="Infraestructura ferroviaria"
+                        fill
+                        className="object-cover opacity-30 grayscale-[0.5]"
+                        fallbackWidth={1920}
+                        fallbackHeight={1080}
+                        fallbackLabel="Hero Background"
+                        priority={priority}
+                    />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0c0e13] via-[#0c0e13]/80 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e13] via-transparent to-transparent" />
             </div>
