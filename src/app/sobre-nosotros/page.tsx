@@ -255,7 +255,7 @@ export default function SobreNosotrosPage() {
                     {/* Final CTA for Authority Page */}
                     <div className="mt-24 text-center">
                         <a href="/contacto" className="btn-primary !py-5 !px-12 !text-lg !rounded-full shadow-2xl shadow-orange/20">
-                            Agendar reunión estratégica
+                            Hablemos de su proyecto
                         </a>
                     </div>
                 </div>

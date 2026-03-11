@@ -186,20 +186,20 @@ export default function Hero({
                     {showCtas && (
                         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                             <Link
-                                href={ROUTES.contacto}
+                                href={ROUTES.servicios}
                                 className="btn-primary group !py-4 !px-8 !text-base shadow-2xl shadow-orange/20 !rounded-full"
-                                aria-label={LABELS.cta.agendarReunion}
+                                aria-label={LABELS.cta.verServicios}
                             >
                                 <span className="flex items-center gap-3">
-                                    {LABELS.cta.agendarReunion}
+                                    {LABELS.cta.verServicios}
                                     <Icons.ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                                 </span>
                             </Link>
                             <Link
-                                href={ROUTES.servicios}
+                                href={ROUTES.contacto}
                                 className="btn-secondary !bg-white/5 !border-white/10 !py-4 !px-8 !text-base hover:!bg-white/10 hover:!border-white/20 !rounded-full"
                             >
-                                {LABELS.cta.verServicios}
+                                {LABELS.cta.contactar}
                             </Link>
                         </div>
                     )}

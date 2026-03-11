@@ -64,13 +64,13 @@ export default async function GraciasPage({
                         {
                             step: '02',
                             title: 'Revisión técnica',
-                            desc: 'Un especialista revisará los detalles en las próximas 24 horas.',
+                            desc: 'Revisaremos su solicitud y le indicaremos los próximos pasos.',
                             active: false,
                         },
                         {
                             step: '03',
                             title: 'Contacto directo',
-                            desc: 'Le contactaremos para agendar una reunión técnica.',
+                            desc: 'Nos pondremos en contacto para definir los siguientes pasos.',
                             active: false,
                         },
                     ].map((item) => (

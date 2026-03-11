@@ -47,6 +47,7 @@ export const LABELS = {
         verServicios: 'Ver alcances técnicos',
         hablarExperto: 'Hablar con un experto',
         agendarReunion: 'Agendar reunión',
+        contactar: 'Contactar',
         suscribirse: 'Suscribirse al Hub',
         verAlcance: 'Ver detalles técnicos',
         solicitarInfo: 'Solicitar información',
@@ -130,11 +131,11 @@ export const LABELS = {
         placeholderEtapa: 'Seleccione la etapa',
         successMsg: '¡Mensaje enviado! Redirigiendo...',
         errorMsg: 'Hubo un error. Intente de nuevo.',
-        microcopy: 'Respondemos en menos de 24 horas',
+        microcopy: 'Le indicaremos los próximos pasos y cómo nos mantendremos en contacto.',
         proceso: [
-            { title: 'Respuesta rápida', desc: 'Le contactamos en menos de 24 horas hábiles.' },
-            { title: 'Llamada técnica', desc: 'Agendamos una sesión de 30 min para entender su necesidad.' },
-            { title: 'Propuesta técnica', desc: 'Entregamos una solución preliminar y presupuesto estimado.' },
+            { title: 'Confirmación', desc: 'Le indicamos los próximos pasos y cómo estableceremos contacto.' },
+            { title: 'Evaluación', desc: 'Revisamos su solicitud y definimos los siguientes pasos según su prioridad.' },
+            { title: 'Propuesta', desc: 'Entregamos solución preliminar y alcance según el modelo de trabajo.' },
         ],
         faqs: [
             { q: '¿Tienen cobertura internacional?', a: 'Sí, ejecutamos proyectos en múltiples países cumpliendo normativas locales e internacionales.' },
@@ -147,7 +148,7 @@ export const LABELS = {
     },
     gracias: {
         titulo: '¡Gracias por escribirnos!',
-        descripcion: 'Hemos recibido su mensaje y le responderemos en menos de 24 horas.',
+        descripcion: 'Hemos recibido su mensaje. Le indicaremos los próximos pasos para mantener el contacto.',
     },
     meta: {
         titleSuffix: 'Ingeniería y Gestión de Proyectos',
