@@ -45,12 +45,12 @@ export const contactChannels: ContactChannel[] = [
         icon: 'whatsapp',
         href: 'https://wa.me/573002400939?text=Hola,%20tengo%20un%20proyecto%20y%20quiero%20evaluar%20cómo%20pueden%20apoyarme%20técnicamente',
     },
-    {
-        title: 'Agendar reunión',
-        description: 'Calendly — 30 min consultoría gratuita',
-        icon: 'calendar',
-        href: 'https://calendly.com/trengie/consulta-tecnica',
-    },
+    // {
+    //     title: 'Agendar reunión',
+    //     description: 'Calendly — 30 min consultoría gratuita',
+    //     icon: 'calendar',
+    //     href: 'https://calendly.com/trengie/consulta-tecnica',
+    // },
     {
         title: 'comercial@trengie.com',
         description: 'Correo corporativo',

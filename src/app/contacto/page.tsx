@@ -17,6 +17,7 @@ export default function ContactoPage() {
                     <SectionHeading
                         label={LABELS.sections.contacto}
                         title={LABELS.headings.contacto}
+                        subtitle={LABELS.subtitles.contacto}
                         light
                     />
                     <div className="mt-10 sm:mt-14">

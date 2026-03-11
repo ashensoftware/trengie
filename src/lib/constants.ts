@@ -38,16 +38,16 @@ export const FOOTER_SERVICES = [
 
 export const LABELS = {
     cta: {
-        contacto: 'Hable con nosotros',
+        contacto: 'Solicitar consulta técnica',
         cotizar: 'Cotizar presupuesto',
-        enviar: 'Enviar mensaje',
+        enviar: 'Enviar solicitud',
         enviando: 'Enviando...',
         enviarSolicitud: 'Enviar solicitud técnica',
         verProyectos: 'Ver portafolio',
         verServicios: 'Ver alcances técnicos',
-        hablarExperto: 'Hablar con un experto',
+        hablarExperto: 'Solicitar consultoría técnica',
         agendarReunion: 'Agendar reunión',
-        contactar: 'Contactar',
+        contactar: 'Solicitar consulta',
         suscribirse: 'Suscribirse al Hub',
         verAlcance: 'Ver detalles técnicos',
         solicitarInfo: 'Solicitar información',
@@ -65,7 +65,7 @@ export const LABELS = {
         servicios: 'Servicios',
         proyectos: 'Proyectos',
         nosotros: 'Nosotros',
-        contacto: 'Contacto',
+        contacto: 'Contacto empresarial',
         soluciones: 'Soluciones',
         fichaTecnica: 'Ficha Técnica',
         certificaciones: 'Certificaciones',
@@ -89,7 +89,7 @@ export const LABELS = {
         servicios: 'Módulos de servicio',
         proyectos: 'Portafolio de proyectos',
         nosotros: 'Quiénes somos',
-        contacto: 'Hablemos de su proyecto',
+        contacto: 'Para clientes institucionales y corporativos',
         nuestrosServicios: 'Nuestros Servicios',
         nuestraHistoria: 'Nuestra historia',
         mision: 'Misión',
@@ -107,7 +107,7 @@ export const LABELS = {
         nosotros:
             'Equipo multidisciplinar con más de 20 años en el sector ferroviario y trayectoria en proyectos en Colombia, Ecuador y la región.',
         contacto:
-            'Estamos disponibles para discutir sus necesidades de infraestructura ferroviaria. Elija el canal que prefiera para comunicarse con nosotros.',
+            'Acompañamos operadores, contratistas y estructuras empresariales en la evaluación de proyectos ferroviarios. Solicitudes institucionales y corporativas.',
         blog: 'Artículos, análisis y tendencias del sector ferroviario e infraestructura de transporte.',
         solucionIntegral: '¿Necesita una solución integral?',
         solucionIntegralDesc:
@@ -118,15 +118,15 @@ export const LABELS = {
     },
     form: {
         nombre: 'Nombre',
-        empresa: 'Empresa',
+        empresa: 'Organización',
         correo: 'Correo electrónico',
         mensaje: 'Mensaje',
         tipoServicio: 'Tipo de servicio',
         etapaProyecto: 'Etapa del proyecto',
         placeholderNombre: 'Su nombre',
-        placeholderEmpresa: 'Su empresa',
+        placeholderEmpresa: 'Su organización o entidad',
         placeholderCorreo: 'correo@empresa.com',
-        placeholderMensaje: 'Cuéntenos sobre su proyecto...',
+        placeholderMensaje: 'Descripción de la necesidad técnica o proyecto corporativo...',
         placeholderServicio: 'Seleccione un servicio',
         placeholderEtapa: 'Seleccione la etapa',
         successMsg: '¡Mensaje enviado! Redirigiendo...',
@@ -157,7 +157,7 @@ export const LABELS = {
         nosotrosDesc:
             'Trengie: ingeniería y gestión de proyectos ferroviarios. Equipo con más de 20 años de experiencia en el sector y trayectoria en la región.',
         contactoDesc:
-            'Hablemos de su proyecto. Soluciones técnicas con estándares internacionales y modelo ágil de trabajo.',
+            'Contacto B2B para clientes institucionales y corporativos. Consultoría técnica ferroviaria para operadores, contratistas y estructuras empresariales.',
         blogDesc:
             'Artículos sobre ingeniería ferroviaria, normativa y tendencias del sector transporte.',
         graciasDesc: 'Su mensaje ha sido enviado correctamente. Lo contactaremos pronto.',
@@ -177,6 +177,6 @@ export const LABELS = {
         servicios: 'Servicios',
         nosotros: 'Nosotros',
         blog: 'Blog',
-        contacto: 'Contacto',
+        contacto: 'Contacto empresarial',
     },
 } as const;

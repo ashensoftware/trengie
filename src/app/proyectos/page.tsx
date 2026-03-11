@@ -140,7 +140,7 @@ export default function ProyectosPage() {
                     </p>
                     <div className="mt-10">
                         <Link href="/contacto" className="btn-primary px-10 py-4 text-base">
-                            Hablar con un experto
+                            {LABELS.cta.hablarExperto}
                         </Link>
                     </div>
                 </div>

@@ -42,13 +42,13 @@ export default async function GraciasPage({
                         Hemos recibido su solicitud sobre{' '}
                         <span className="font-bold text-orange">{servicio}</span>.
                         <br className="hidden sm:block" />
-                        Nuestro equipo técnico la revisará y se pondrá en contacto con usted.
+                        Revisaremos su solicitud y le indicaremos los próximos pasos.
                     </p>
                 ) : (
                     <p className="mt-4 text-lg text-white/70 sm:text-xl">
                         Hemos recibido su solicitud correctamente.
                         <br className="hidden sm:block" />
-                        Nuestro equipo técnico la revisará y se pondrá en contacto con usted.
+                        Revisaremos su solicitud y le indicaremos los próximos pasos.
                     </p>
                 )}
 
