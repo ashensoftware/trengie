@@ -6,10 +6,10 @@
         "year": 2023,
         "location": "Medellín, Colombia",
         "cover": "/images/projects/metro-de-la-80-medellin/metro-80-medellin.jpg",
-        "summary": "Diseño preliminar y detallado de los sistemas de Subestaciones, Catenaria, SCADA, Señalización, Control de Trenes y Sistema Contra Incendios para un corredor de Metro Ligero de 13.25 km en doble vía con 17 estaciones.",
-        "scope": "Diseño integral de sistemas electromecánicos, energía, y control",
-        "role": "Responsabilidad Técnica y Diseño",
-        "results": "Optimización del 20% en costos de infraestructura mediante ingeniería de valor.",
+        "summary": "Supervisión del diseño electromecánico de 13,25 km de vía para el Tranvía Avenida 80 (Metro Ligero). Incremento del 70% del valor contractual y mejora de eficiencia en costes mediante socios locales.",
+        "scope": "Diseño integral de sistemas electromecánicos, energía y control",
+        "role": "Country Manager Colombia (Systra)",
+        "results": "Incremento del 70% del valor contractual y optimización de costes con socios locales.",
         "images": [
             "/images/projects/metro-de-la-80-medellin/metro-80-medellin-1.jpg"
         ]
@@ -60,6 +60,21 @@
         ]
     },
     {
+        "title": "Metro de Lima",
+        "slug": "metro-lima",
+        "category": "Supervisión Técnica",
+        "year": 2022,
+        "location": "Lima, Perú",
+        "cover": "/images/projects/metro-lima/metro-lima.jpg",
+        "summary": "Supervisión de electrificación ferroviaria (subestaciones y catenaria) y auditoría de niveles de servicio para la Línea 1 (35 km, 26 estaciones) y acompañamiento técnico en la Línea 2 en construcción.",
+        "scope": "Supervisión de sistemas eléctricos, evaluación de interfaces y ciclos de vida",
+        "role": "Supervisor de Electrificación y Auditor de Servicio",
+        "results": "Contribución a la continuidad operativa y planes de mejora del concesionario.",
+        "images": [
+            "/images/projects/metro-lima/metro-lima.jpg"
+        ]
+    },
+    {
         "title": "Tren de Alta Velocidad Lima - Barranca",
         "slug": "tren-alta-velocidad-lima-barranca",
         "category": "Estructuración Ferroviaria",
@@ -87,6 +102,81 @@
         "results": "Aseguramiento del 100% en disponibilidad operacional para el inicio de servicio.",
         "images": [
             "/images/projects/primera-linea-metro-quito/metro-quito-1.jpg"
+        ]
+    },
+    {
+        "title": "Tren Interurbano México–Toluca",
+        "slug": "tren-interurbano-mexico-toluca",
+        "category": "Interventoría e Integración",
+        "year": 2023,
+        "location": "Estado de México, México",
+        "cover": "/images/projects/tren-mexico-toluca/tren-mexico-toluca.jpg",
+        "summary": "Supervisión técnica integral de Señalización, Telecomunicaciones y Centro de Control (ATP/ATO/ATS, fibra óptica, TETRA, CCTV, SCADA) para el tren interurbano de 57 km entre Ciudad de México y Toluca con 6 estaciones.",
+        "scope": "Supervisión e integración de señalización, telecomunicaciones y CCO",
+        "role": "Coordinador Técnico Senior de Sistemas Ferroviarios",
+        "results": "Garantía de niveles de disponibilidad, confiabilidad y seguridad para la puesta en servicio.",
+        "images": [
+            "/images/projects/tren-mexico-toluca/tren-mexico-toluca.jpg"
+        ]
+    },
+    {
+        "title": "Líneas 8, 10 y 11 CPTM São Paulo",
+        "slug": "lineas-cptm-sao-paulo",
+        "category": "Señalización y CBTC",
+        "year": 2019,
+        "location": "São Paulo, Brasil",
+        "cover": "/images/projects/lineas-cptm-sao-paulo/cptm-sao-paulo.jpg",
+        "summary": "Implementación de señalización CBTC en más de 130 km para las líneas 8, 10 y 11 del tren metropolitano de São Paulo (CPTM). Reactivación del programa tras cinco años de suspensión y restablecimiento de la confianza institucional.",
+        "scope": "CBTC, señalización ferroviaria y gobernanza de consorcio",
+        "role": "Director General de Consorcio",
+        "results": "Reactivación exitosa del programa y entrega de más de 130 km de sistemas de control.",
+        "images": [
+            "/images/projects/lineas-cptm-sao-paulo/cptm-sao-paulo.jpg"
+        ]
+    },
+    {
+        "title": "LRT Jabodebek",
+        "slug": "lrt-jabodebek-yakarta",
+        "category": "Señalización y CBTC",
+        "year": 2017,
+        "location": "Yakarta, Indonesia",
+        "cover": "/images/projects/lrt-jabodebek/lrt-jabodebek.jpg",
+        "summary": "Entrega del sistema CBTC para un corredor LRT de 43 km, mejorando la rentabilidad del proyecto en un 4% y optimizando el flujo de caja. Liderazgo de Joint Ventures internacionales con volúmenes de hasta 300 M€.",
+        "scope": "CBTC, señalización y control de trenes",
+        "role": "Director General de Consorcio",
+        "results": "Optimización financiera del proyecto y entrega a tiempo del sistema.",
+        "images": [
+            "/images/projects/lrt-jabodebek/lrt-jabodebek.jpg"
+        ]
+    },
+    {
+        "title": "LRT Palembang",
+        "slug": "lrt-palembang-indonesia",
+        "category": "Señalización ETCS",
+        "year": 2017,
+        "location": "Palembang, Indonesia",
+        "cover": "/images/projects/lrt-palembang/lrt-palembang.jpg",
+        "summary": "Implementación de señalización ETCS Nivel 1 en 21,7 km del LRT de Palembang, logrando la puesta en servicio anticipada antes de los Juegos Asiáticos 2018.",
+        "scope": "ETCS Nivel 1 y señalización ferroviaria",
+        "role": "Director de Proyecto",
+        "results": "Puesta en servicio anticipada para el evento deportivo internacional.",
+        "images": [
+            "/images/projects/lrt-palembang/lrt-palembang.jpg"
+        ]
+    },
+    {
+        "title": "Línea Bandırma-Balıkesir-Manisa",
+        "slug": "linea-bandirma-balikesir-manisa",
+        "category": "Señalización ETCS",
+        "year": 2014,
+        "location": "Turquía",
+        "cover": "/images/projects/linea-bandirma-turquia/bandirma-turquia.jpg",
+        "summary": "Despliegue de señalización ETCS Nivel 1 y 2 para 30 trenes. Disolución de Joint Venture ineficiente para asumir el control total, renegociación del alcance contractual y establecimiento de la oficina de Ankara.",
+        "scope": "ETCS Nivel 1 y 2, gestión de JV y recuperación de programa",
+        "role": "Director de Sucursal y Director de Proyecto",
+        "results": "Control total del programa y entrega bajo estándares internacionales.",
+        "images": [
+            "/images/projects/linea-bandirma-turquia/bandirma-turquia.jpg"
         ]
     },
     {

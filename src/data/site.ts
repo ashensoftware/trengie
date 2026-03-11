@@ -3,7 +3,7 @@ import type { Stat, Value, NormativeReference, ContactChannel } from '@/lib/type
 export const heroStats: Stat[] = [
     { value: '20+', label: 'Años del equipo en el sector' },
     { value: '50+', label: 'Proyectos del equipo' },
-    { value: '3', label: 'Países con operación' },
+    { value: '8', label: 'Países con ejecución de proyectos' },
 ];
 
 export const companyValues: Value[] = [
@@ -91,7 +91,7 @@ export const methodology = [
 export const capabilities = [
     { value: '20+', label: 'Años del equipo en el sector' },
     { value: '50+', label: 'Proyectos del equipo' },
-    { value: '3', label: 'Países con operación' },
+    { value: '8', label: 'Países con ejecución de proyectos' },
     { value: '100%', label: 'Cumplimiento RAMS' },
 ];
 

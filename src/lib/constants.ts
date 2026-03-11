@@ -105,7 +105,7 @@ export const LABELS = {
         serviciosPage:
             'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
         nosotros:
-            'Equipo multidisciplinar con más de 20 años en el sector ferroviario y trayectoria en proyectos en Colombia, Ecuador y la región.',
+            'Equipo multidisciplinar con más de 20 años en el sector ferroviario y proyectos ejecutados en Colombia, Ecuador, Perú, México, Brasil, Indonesia, Turquía y España.',
         contacto:
             'Acompañamos operadores, contratistas y estructuras empresariales en la evaluación de proyectos ferroviarios. Solicitudes institucionales y corporativas.',
         blog: 'Artículos, análisis y tendencias del sector ferroviario e infraestructura de transporte.',
