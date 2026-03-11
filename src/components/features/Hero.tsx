@@ -163,15 +163,13 @@ export default function Hero({
                             ))}
                         </div>
 
-                        {/* Certifications Label */}
+                        {/* Normativas de referencia (no claim de certificación) */}
                         <div className="bg-orange/5 px-6 py-4 lg:py-8 text-center lg:text-left lg:min-w-[300px] group transition-colors hover:bg-orange/10 flex flex-col justify-center">
                             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-orange mb-1 block">
-                                Estándares Internacionales
+                                Normativas de referencia
                             </span>
                             <div className="flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-1">
-                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">CERTIFICADOS ISO / CENELEC</span>
-                                <span className="text-xs font-bold text-white/20">|</span>
-                                <span className="text-xs font-bold text-white/50 group-hover:text-orange transition-colors">RAMS / SIL4</span>
+                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">Trabajamos con ISO · CENELEC · RAMS / SIL4</span>
                             </div>
                         </div>
                     </div>

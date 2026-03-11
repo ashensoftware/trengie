@@ -136,7 +136,7 @@ export default function HomePage() {
             Reduzca riesgos en su megaproyecto ferroviario
           </h2>
           <p className="text-white/90 text-xl font-medium mb-12 max-w-2xl mx-auto tracking-wide drop-shadow">
-            Evite sobrecostos y garantice el cumplimiento normativo (CENELEC / SIL4) desde la estructuración técnica.
+            Evite sobrecostos y garantice el cumplimiento normativo de referencia (CENELEC, SIL4) desde la estructuración técnica.
           </p>
           <Link href={ROUTES.contacto} className="btn-secondary !bg-[#0c0e13] !text-white hover:!bg-[#1a1a1a] !border-none !py-5 !px-12 !text-lg !rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] hover:-translate-y-1 transition-all duration-300 font-black uppercase tracking-widest focus-visible:ring-4 focus-visible:ring-white">
             Hablar con un experto

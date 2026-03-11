@@ -42,6 +42,11 @@ export interface Certification {
     name: string;
 }
 
+/** Normativa de referencia con la que se trabaja en proyectos (no certificación de la empresa). */
+export interface NormativeReference {
+    name: string;
+}
+
 export interface ContactChannel {
     title: string;
     description: string;

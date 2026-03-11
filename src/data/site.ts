@@ -1,4 +1,4 @@
-import type { Stat, Value, Certification, ContactChannel } from '@/lib/types';
+import type { Stat, Value, NormativeReference, ContactChannel } from '@/lib/types';
 
 export const heroStats: Stat[] = [
     { value: '20+', label: 'Años de experiencia' },
@@ -29,7 +29,8 @@ export const companyValues: Value[] = [
     },
 ];
 
-export const certifications: Certification[] = [
+/** Normativas con las que trabajamos (referencia en proyectos; no implica certificación de la empresa). */
+export const normativeReferences: NormativeReference[] = [
     { name: 'CENELEC EN 50126' },
     { name: 'CENELEC EN 50128' },
     { name: 'CENELEC EN 50129' },
@@ -83,7 +84,7 @@ export const methodology = [
     { step: '01', title: 'Diagnóstico', desc: 'Evaluamos el contexto técnico, normativo y operacional del proyecto.' },
     { step: '02', title: 'Diseño', desc: 'Definimos ingeniería conceptual, básica y de detalle.' },
     { step: '03', title: 'Ejecución', desc: 'Montaje, integración de sistemas y coordinación multidisciplinaria.' },
-    { step: '04', title: 'Verificación', desc: 'Pruebas, RAMS y certificación bajo estándares internacionales.' },
+    { step: '04', title: 'Verificación', desc: 'Pruebas, RAMS y verificación bajo estándares internacionales.' },
     { step: '05', title: 'Entrega', desc: 'Comisionamiento, capacitación y acompañamiento post puesta en marcha.' },
 ];
 

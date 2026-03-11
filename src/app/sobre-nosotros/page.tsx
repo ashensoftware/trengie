@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { LABELS } from '@/lib/constants';
-import { companyValues, certifications, companyDescription, methodology, capabilities, featuredClients } from '@/data/site';
+import { companyValues, normativeReferences, companyDescription, methodology, capabilities, featuredClients } from '@/data/site';
 
 export const metadata: Metadata = {
     title: LABELS.sections.nosotros,
@@ -192,7 +192,7 @@ export default function SobreNosotrosPage() {
                             </div>
 
                             {/* Certificaciones Premium (P2) */}
-                            {certifications.length > 0 && (
+                            {normativeReferences.length > 0 && (
                                 <div className="mt-16 bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12">
                                     <div className="flex items-center gap-4 mb-8">
                                         <div className="h-10 w-10 shrink-0 bg-orange/20 rounded-lg flex items-center justify-center text-orange">
@@ -201,15 +201,15 @@ export default function SobreNosotrosPage() {
                                             </svg>
                                         </div>
                                         <div>
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-orange block">Cumplimiento Normativo</span>
-                                            <h3 className="text-xl font-black text-white uppercase tracking-tight">Estándares Internacionales</h3>
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-orange block">Trabajamos con</span>
+                                            <h3 className="text-xl font-black text-white uppercase tracking-tight">Normativas de referencia</h3>
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {certifications.map((cert) => (
-                                            <div key={cert.name} className="flex items-center gap-3 bg-white/5 px-5 py-4 rounded-xl border border-white/5 group hover:border-orange/40 transition-colors">
+                                        {normativeReferences.map((ref) => (
+                                            <div key={ref.name} className="flex items-center gap-3 bg-white/5 px-5 py-4 rounded-xl border border-white/5 group hover:border-orange/40 transition-colors">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-orange" />
-                                                <span className="text-xs font-black text-white/70 group-hover:text-white transition-colors">{cert.name}</span>
+                                                <span className="text-xs font-black text-white/70 group-hover:text-white transition-colors">{ref.name}</span>
                                             </div>
                                         ))}
                                     </div>

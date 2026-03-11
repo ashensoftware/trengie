@@ -14,7 +14,7 @@ const processSteps = [
     { number: '01', title: 'Discovery', desc: 'Análisis de requerimientos, normativa aplicable y condiciones del proyecto.' },
     { number: '02', title: 'Ingeniería', desc: 'Diseño conceptual, básico y de detalle con estándares internacionales.' },
     { number: '03', title: 'Implementación', desc: 'Montaje, integración de sistemas y coordinación multidisciplinaria.' },
-    { number: '04', title: 'Pruebas', desc: 'Validación funcional, pruebas estáticas/dinámicas y certificación RAMS.' },
+    { number: '04', title: 'Pruebas', desc: 'Validación funcional, pruebas estáticas/dinámicas y verificación RAMS.' },
     { number: '05', title: 'Puesta en marcha', desc: 'Comisionamiento, operación asistida y transferencia de conocimiento.' },
 ];
 
