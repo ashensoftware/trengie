@@ -6,10 +6,10 @@
         "year": 2023,
         "location": "Medellín, Colombia",
         "cover": "/images/projects/metro-de-la-80-medellin/metro-80-medellin.jpg",
-        "summary": "Supervisión del diseño electromecánico de 13,25 km de vía para el Tranvía Avenida 80 (Metro Ligero). Incremento del 70% del valor contractual y mejora de eficiencia en costes mediante socios locales.",
-        "scope": "Diseño integral de sistemas electromecánicos, energía y control",
-        "role": "Country Manager Colombia (Systra)",
-        "results": "Incremento del 70% del valor contractual y optimización de costes con socios locales.",
+        "summary": "Proyecto estratégico de metro ligero de 13,25 km y 17 estaciones sobre el corredor de la Avenida 80, que ampliará la red del Metro de Medellín con trenes eléctricos y sistemas modernos de energía, señalización y control.",
+        "scope": "Estructuración y supervisión del diseño de Subestaciones, Catenaria, SCADA, Señalización, Telecomunicaciones, integración de sistemas, compatibilidad electromagnética, RAMS y sistemas de puesta a tierra.",
+        "role": "Apoyo en estructuración (EMM) y supervisión técnica de sistemas (SYSTRA / CRRC).",
+        "results": "Fortalecimiento de la integración multimodal y bases técnicas sólidas para un transporte urbano sostenible en Medellín.",
         "images": [
             "/images/projects/metro-de-la-80-medellin/metro-80-medellin-1.jpg"
         ]
@@ -21,10 +21,10 @@
         "year": 2018,
         "location": "Bogotá, Colombia",
         "cover": "/images/projects/primera-linea-metro-bogota/metro-bogota-plmb.jpg",
-        "summary": "Supervisión técnica, estructuración y revisión de la ingeniería de detalle y básica para el primer sistema de Metro automático en Colombia en su primera Línea de 24 km en doble vía con 16 estaciones.",
-        "scope": "Material Rodante y todos los subsistemas ferroviarios (Energía, Señalización, Telecom, CBTC GoA4, RAMS)",
-        "role": "Supervisión de Contratos y Revisión Técnica",
-        "results": "Garantía de cumplimiento SIL4 en todos los sistemas de seguridad crítica.",
+        "summary": "Línea de metro elevado de aproximadamente 24 km con 16 estaciones y trenes eléctricos automatizados, concebida para transformar la movilidad en el principal corredor de demanda de Bogotá.",
+        "scope": "Estructuración y documentación técnica de licitación, supervisión de Material Rodante, alimentación eléctrica (Subestaciones, Tercer Riel, SCADA), señalización GoA4, equipos de taller y sistemas de telecomunicaciones, así como control de interfaces y compatibilidad electromagnética.",
+        "role": "Equipo técnico como parte de la Empresa Metro de Bogotá en la estructuración, supervisión y seguimiento de contratos.",
+        "results": "Contribución clave a la implementación del primer sistema de Metro automático en Colombia, asegurando desempeño, seguridad y coherencia técnica entre todos los sistemas.",
         "images": [
             "/images/projects/primera-linea-metro-bogota/metro-bogota-plmb-1.jpg"
         ]
@@ -36,10 +36,10 @@
         "year": 2018,
         "location": "Bogotá, Colombia",
         "cover": "/images/projects/segunda-linea-metro-bogota/metro-bogota-l2.jpg",
-        "summary": "Estructuración y ejecución de la factibilidad para la construcción de la segunda línea de Metro automático para un corredor urbano de 15.5 km con 11 estaciones, un Patio Taller, OCC y 25 trenes.",
-        "scope": "Estudios de factibilidad técnica",
-        "role": "Estructuración de Documentación",
-        "results": "Viabilidad técnica aprobada para inversión internacional de gran escala.",
+        "summary": "Línea subterránea estratégica de aproximadamente 15–16 km que conectará Suba y Engativá con la red de metro, reforzando la capacidad del sistema y la movilidad sostenible en Bogotá.",
+        "scope": "Estructuración y ejecución de la factibilidad técnica, incluyendo la elaboración de documentación para licitación internacional de sistemas metroferroviarios y definición de requerimientos de túneles, estaciones, energía, señalización y control operativo.",
+        "role": "Equipo técnico como parte de la Empresa Metro de Bogotá, liderando estudios de factibilidad y documentación técnica especializada.",
+        "results": "Base técnica robusta para la ampliación de la red de metro de Bogotá y la integración futura con la Primera Línea y otros sistemas de transporte.",
         "images": [
             "/images/projects/segunda-linea-metro-bogota/metro-bogota-l2.jpg"
         ]
@@ -51,10 +51,10 @@
         "year": 2013,
         "location": "Medellín, Colombia",
         "cover": "/images/projects/tranvia-ayacucho/tranvia-ayacucho-real.jpg",
-        "summary": "Diseño, construcción, montaje y puesta a punto del sistema de alimentación eléctrica (Subestaciones y Catenaria) e inspección de Señalización para el corredor urbano de 4.2 km en vía doble con 9 estaciones.",
-        "scope": "Suministro, montaje y pruebas de energía y señalización",
-        "role": "Coordinación de Montaje y Supervisión",
-        "results": "Incremento del 25% en la eficiencia energética de la red de tracción.",
+        "summary": "Línea de metro ligero de 4,3 km con 9 estaciones que conecta el centro de Medellín con el oriente de la ciudad, integrada con líneas de Metrocable y equipada con tranvías eléctricos adaptados a pendientes pronunciadas.",
+        "scope": "Supervisión de construcción, montaje, pruebas y puesta a punto del Material Rodante, sistemas de alimentación eléctrica (Subestaciones, Catenaria y SCADA) y equipos de señalización, incluyendo pruebas de integración de sistemas.",
+        "role": "Supervisión técnica como parte de la Empresa Metro de Medellín Ltda.",
+        "results": "Puesta en servicio exitosa de un sistema de metro ligero integrado, mejorando la movilidad y apoyando la renovación urbana del centro-oriente de Medellín.",
         "images": [
             "/images/projects/tranvia-ayacucho/tranvia-ayacucho-real-1.jpg"
         ]
@@ -186,12 +186,57 @@
         "year": 2022,
         "location": "Cundinamarca, Colombia",
         "cover": "/images/projects/regiotram-occidente/regiotram-occidente.jpg",
-        "summary": "Evaluación técnica de especificaciones para los sistemas de energía, catenaria, material rodante y equipos de taller, así como líder de integración e interfaces del corredor de 45 km.",
-        "scope": "Interventoría y supervisión del cumplimiento normativo y RAMS",
-        "role": "Especialista en Interfaces Ferroviarias",
-        "results": "Mitigación total de riesgos de incompatibilidad entre subsistemas críticos.",
+        "summary": "Sistema ferroviario regional de 45 km que conecta Bogotá con los municipios de la Sabana de Occidente mediante trenes eléctricos de cercanías, modernizando el corredor ferroviario existente con nuevas estaciones, electrificación y señalización.",
+        "scope": "Evaluación de especificaciones técnicas de Material Rodante, alimentación de energía (Subestaciones, Catenaria, SCADA), equipos de Patio Taller y control de integración e interfaces del sistema.",
+        "role": "Interventoría técnica como parte del Consorcio Interventor RegioTram de Occidente.",
+        "results": "Reducción de riesgos técnicos e incremento de la compatibilidad entre subsistemas críticos, facilitando la implementación de un sistema regional sostenible.",
         "images": [
             "/images/projects/regiotram-occidente/regiotram-occidente-1.jpg"
+        ]
+    },
+    {
+        "title": "Extensión al Sur del Metro de Medellín",
+        "slug": "extension-sur-metro-medellin",
+        "category": "Ingeniería y Expansión de Red",
+        "year": 2013,
+        "location": "Medellín, Colombia",
+        "cover": "/images/projects/extension-sur-metro-medellin/extension-sur-metro-medellin.jpg",
+        "summary": "Proyecto de ampliación de la Línea A del Metro de Medellín hacia Sabaneta y La Estrella, mediante nueva infraestructura ferroviaria y estaciones adicionales para mejorar la conectividad del sur del Valle de Aburrá.",
+        "scope": "Diseño, montaje y puesta a punto de la catenaria compuesta en 5,5 km de vía doble con 3 estaciones, así como supervisión del montaje y puesta a punto de equipos de señalización y apoyo a pruebas de integración.",
+        "role": "Equipo técnico como parte de la Empresa Metro de Medellín Ltda en actividades de diseño y supervisión.",
+        "results": "Incremento de la capacidad del sistema y mejora en los tiempos de desplazamiento en el corredor sur del Valle de Aburrá.",
+        "images": [
+            "/images/projects/extension-sur-metro-medellin/extension-sur-metro-medellin-1.jpg"
+        ]
+    },
+    {
+        "title": "Ampliación del Patio de Bello del Metro de Medellín",
+        "slug": "ampliacion-patio-bello-metro-medellin",
+        "category": "Operación y Mantenimiento",
+        "year": 2012,
+        "location": "Medellín, Colombia",
+        "cover": "/images/projects/ampliacion-patio-bello-metro-medellin/ampliacion-patio-bello-metro-medellin.jpg",
+        "summary": "Ampliación y modernización del Patio Taller de Bello para aumentar la capacidad de estacionamiento, mantenimiento y alistamiento del material rodante del Metro de Medellín.",
+        "scope": "Diseño, montaje y puesta a punto de la catenaria tipo Trolley y supervisión técnica de equipos del Patio Taller para soportar el crecimiento de la flota y la expansión de la red.",
+        "role": "Equipo técnico como parte de la Empresa Metro de Medellín Ltda en el diseño y supervisión de sistemas de energía y equipos de taller.",
+        "results": "Optimización de la capacidad operativa y mejora en la disponibilidad de trenes para la red del Metro de Medellín.",
+        "images": [
+            "/images/projects/ampliacion-patio-bello-metro-medellin/ampliacion-patio-bello-metro-medellin-1.jpg"
+        ]
+    },
+    {
+        "title": "Mantenimiento y Operación del Metro de Medellín",
+        "slug": "mantenimiento-operacion-metro-medellin",
+        "category": "Operación y Mantenimiento",
+        "year": 1995,
+        "location": "Medellín, Colombia",
+        "cover": "/images/projects/mantenimiento-operacion-metro-medellin/mantenimiento-operacion-metro-medellin.jpg",
+        "summary": "Acompañamiento a largo plazo al principal sistema de transporte ferroviario urbano de Colombia, compuesto por líneas de metro, tranvía, Metrocables y otros modos eléctricos que recorren el Valle de Aburrá.",
+        "scope": "Coordinación de mantenimiento y operación de Material Rodante, suministro de energía (Catenaria, Subestaciones, SGE), señalización, sistemas telemáticos y de telecomunicaciones, vehículos auxiliares, equipos de taller y sistemas electromecánicos de cable aéreo, así como modernización de flota y proyectos especiales.",
+        "role": "Equipo humano con responsabilidades de coordinación, operación, mantenimiento y modernización como parte de la Empresa Metro de Medellín Ltda.",
+        "results": "Mejora continua de la disponibilidad, confiabilidad y seguridad del sistema, consolidando al Metro de Medellín como referente de movilidad sostenible en América Latina.",
+        "images": [
+            "/images/projects/mantenimiento-operacion-metro-medellin/mantenimiento-operacion-metro-medellin-1.jpg"
         ]
     }
 ]
