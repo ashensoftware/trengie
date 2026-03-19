@@ -34,6 +34,7 @@ export const normativeReferences: NormativeReference[] = [
     { name: 'CENELEC EN 50126' },
     { name: 'CENELEC EN 50128' },
     { name: 'CENELEC EN 50129' },
+    { name: 'EN 50119' },
     { name: 'ISO 50001 – Gestión Energética' },
     { name: 'RAMS / SIL4' },
 ];

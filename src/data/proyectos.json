@@ -81,10 +81,10 @@
         "year": 2025,
         "location": "Lima, Perú",
         "cover": "/images/projects/tren-alta-velocidad-lima-barranca/tren-lima-barranca.jpg",
-        "summary": "Estudio de factibilidad para el Tren de alta velocidad Lima-Barranca de 250 km de longitud, 26 estaciones, con velocidad máxima de 200 km/h y demanda de 280,000 pasajeros diarios.",
-        "scope": "Factibilidad y coordinación de sistemas ferroviarios, RAMS y operaciones",
-        "role": "Líder de Sistemas e Integración",
-        "results": "Reducción estimada del 40% en tiempos de viaje interurbano.",
+        "summary": "El Tren de Alta Velocidad Lima-Barranca es una iniciativa para desarrollar un corredor ferroviario moderno en la costa central del Perú, con aproximadamente 250 km de longitud y operación prevista con trenes eléctricos a 200 km/h. El proyecto contempla 26 estaciones, 2 terminales, 2 patios taller, sistemas de electrificación, señalización avanzada y control ferroviario para fortalecer la conectividad regional y la movilidad sostenible.",
+        "scope": "Estructuración y ejecución de la factibilidad de la línea en sus componentes ferroviarios: material rodante, electrificación, señalización, equipos de patio taller, plan de operación y mantenimiento, integración de sistemas y evaluación RAMS.",
+        "role": "Liderazgo de factibilidad e integración ferroviaria.",
+        "results": "Base técnica consolidada para la toma de decisiones del proyecto, con enfoque en viabilidad, seguridad operativa y desempeño integral del sistema.",
         "images": [
             "/images/projects/tren-alta-velocidad-lima-barranca/tren-lima-barranca.jpg"
         ]
@@ -96,10 +96,10 @@
         "year": 2022,
         "location": "Quito, Ecuador",
         "cover": "/images/projects/primera-linea-metro-quito/metro-quito.jpg",
-        "summary": "Consultoría técnica especializada para la estructuración técnica de la operación y el mantenimiento de la Primera Línea del Metro de Quito, brindando asesoría integral a la EPMMQ.",
-        "scope": "Documentación estratégica, O&M de sistemas metro ferroviarios",
-        "role": "Experto Ferroviario en O&M",
-        "results": "Aseguramiento del 100% en disponibilidad operacional para el inicio de servicio.",
+        "summary": "La Línea 1 del Metro de Quito es el principal proyecto de transporte ferroviario urbano de la ciudad, con aproximadamente 22 km totalmente subterráneos y 15 estaciones en el eje norte-sur. El sistema integra trenes eléctricos de alta capacidad, túneles, estaciones subterráneas y subsistemas críticos de señalización, energía, ventilación y control operativo para mejorar la movilidad metropolitana.",
+        "scope": "Asesoría técnica para la estructuración del modelo de operación y mantenimiento (O&M), incluyendo lineamientos técnicos, KPI y matrices de riesgo, además de la validación funcional de señalización (ATO/ATP/ATS), energía y tracción, telecomunicaciones (fibra óptica, transmisión de datos, TETRA, CCTV y control de accesos) y SCADA.",
+        "role": "Asesoría técnica en O&M y validación de sistemas.",
+        "results": "Fortalecimiento de la seguridad, confiabilidad y continuidad operativa del sistema para soportar una operación sostenible en la ciudad.",
         "images": [
             "/images/projects/primera-linea-metro-quito/metro-quito-1.jpg"
         ]
@@ -111,10 +111,10 @@
         "year": 2023,
         "location": "Estado de México, México",
         "cover": "/images/projects/tren-mexico-toluca/tren-mexico-toluca.jpg",
-        "summary": "Supervisión técnica integral de Señalización, Telecomunicaciones y Centro de Control (ATP/ATO/ATS, fibra óptica, TETRA, CCTV, SCADA) para el tren interurbano de 57 km entre Ciudad de México y Toluca con 6 estaciones.",
-        "scope": "Supervisión e integración de señalización, telecomunicaciones y CCO",
-        "role": "Coordinador Técnico Senior de Sistemas Ferroviarios",
-        "results": "Garantía de niveles de disponibilidad, confiabilidad y seguridad para la puesta en servicio.",
+        "summary": "El Tren Interurbano México-Toluca es un proyecto ferroviario de alta capacidad que conecta Ciudad de México con Toluca a lo largo de aproximadamente 57 km, mediante tramos elevados, viaductos y túneles. El sistema opera con trenes eléctricos de alta velocidad comercial para mejorar la conectividad regional, reducir tiempos de viaje y descongestionar corredores viales estratégicos.",
+        "scope": "Supervisión, integración y control de interfaces de sistemas ferroviarios desde la planificación hasta la implementación y operación, incluyendo señalización, telecomunicaciones, energía, control de tráfico, telemática, información al pasajero, seguridad y control operativo.",
+        "role": "Integración de sistemas y control de interfaces.",
+        "results": "Puesta en servicio con mayor consistencia entre subsistemas críticos, fortaleciendo seguridad operacional, confiabilidad y desempeño integral del corredor.",
         "images": [
             "/images/projects/tren-mexico-toluca/tren-mexico-toluca.jpg"
         ]
@@ -126,10 +126,10 @@
         "year": 2019,
         "location": "São Paulo, Brasil",
         "cover": "/images/projects/lineas-cptm-sao-paulo/cptm-sao-paulo.jpg",
-        "summary": "Implementación de señalización CBTC en más de 130 km para las líneas 8, 10 y 11 del tren metropolitano de São Paulo (CPTM). Reactivación del programa tras cinco años de suspensión y restablecimiento de la confianza institucional.",
-        "scope": "CBTC, señalización ferroviaria y gobernanza de consorcio",
-        "role": "Director General de Consorcio",
-        "results": "Reactivación exitosa del programa y entrega de más de 130 km de sistemas de control.",
+        "summary": "Las líneas 8, 10 y 11 de la CPTM en São Paulo forman parte de un sistema metropolitano de alta capacidad clave para la conectividad urbana y regional. El corredor opera con trenes eléctricos y una infraestructura modernizada para atender altos volúmenes de demanda diaria, aportando a la descongestión vial y a la consolidación de un transporte ferroviario masivo eficiente.",
+        "scope": "Dirección general de la implementación de la señalización CBTC en las tres líneas metropolitanas (130 km), incluyendo equipos embarcados para 84 trenes y la coordinación integral del programa.",
+        "role": "Dirección del programa CBTC metropolitano.",
+        "results": "Reactivación del programa tras cinco años de suspensión, recuperación del control operativo y restablecimiento de los trabajos de obra bajo estándares de desempeño y seguridad.",
         "images": [
             "/images/projects/lineas-cptm-sao-paulo/cptm-sao-paulo.jpg"
         ]
@@ -141,10 +141,10 @@
         "year": 2017,
         "location": "Yakarta, Indonesia",
         "cover": "/images/projects/lrt-jabodebek/lrt-jabodebek.jpg",
-        "summary": "Entrega del sistema CBTC para un corredor LRT de 43 km, mejorando la rentabilidad del proyecto en un 4% y optimizando el flujo de caja. Liderazgo de Joint Ventures internacionales con volúmenes de hasta 300 M€.",
-        "scope": "CBTC, señalización y control de trenes",
-        "role": "Director General de Consorcio",
-        "results": "Optimización financiera del proyecto y entrega a tiempo del sistema.",
+        "summary": "El LRT Jabodebek es un sistema de metro ligero automatizado que atiende el area metropolitana de Yakarta (Jabodetabek), con aproximadamente 44 km de corredor elevado, 16 estaciones y operacion con trenes electricos sin conductor. El proyecto integra infraestructura elevada, senalizacion CBTC, electrificacion y control centralizado para conectar el centro urbano con zonas perifericas como Bekasi y Depok.",
+        "scope": "Direccion integral de la implementacion de la senalizacion CBTC en 43 km de corredor urbano, 16 estaciones, deposito, OCC y 31 trenes.",
+        "role": "Dirección de implementación CBTC e interfaces.",
+        "results": "Optimizacion de hitos contractuales, mejora del flujo de caja y aumento de la rentabilidad del proyecto durante su ejecucion.",
         "images": [
             "/images/projects/lrt-jabodebek/lrt-jabodebek.jpg"
         ]
@@ -156,10 +156,10 @@
         "year": 2017,
         "location": "Palembang, Indonesia",
         "cover": "/images/projects/lrt-palembang/lrt-palembang.jpg",
-        "summary": "Implementación de señalización ETCS Nivel 1 en 21,7 km del LRT de Palembang, logrando la puesta en servicio anticipada antes de los Juegos Asiáticos 2018.",
-        "scope": "ETCS Nivel 1 y señalización ferroviaria",
-        "role": "Director de Proyecto",
-        "results": "Puesta en servicio anticipada para el evento deportivo internacional.",
+        "summary": "El LRT Palembang es un sistema de metro ligero elevado desarrollado para mejorar la movilidad urbana y soportar la operacion durante los Juegos Asiaticos 2018. La linea cuenta con aproximadamente 23 km y 13 estaciones, conectando el aeropuerto con el centro de la ciudad mediante trenes electricos, infraestructura elevada y sistemas de senalizacion, energia y control operacional.",
+        "scope": "Direccion general de la implementacion de la senalizacion ETCS Nivel 1 en un corredor urbano de 21,7 km con 13 estaciones.",
+        "role": "Dirección técnica y puesta en servicio ETCS.",
+        "results": "Puesta en servicio anticipada antes de los Juegos Asiaticos 2018, cumpliendo los objetivos de disponibilidad y oportunidad del sistema.",
         "images": [
             "/images/projects/lrt-palembang/lrt-palembang.jpg"
         ]
@@ -171,10 +171,10 @@
         "year": 2014,
         "location": "Turquía",
         "cover": "/images/projects/linea-bandirma-turquia/bandirma-turquia.jpg",
-        "summary": "Despliegue de señalización ETCS Nivel 1 y 2 para 30 trenes. Disolución de Joint Venture ineficiente para asumir el control total, renegociación del alcance contractual y establecimiento de la oficina de Ankara.",
-        "scope": "ETCS Nivel 1 y 2, gestión de JV y recuperación de programa",
-        "role": "Director de Sucursal y Director de Proyecto",
-        "results": "Control total del programa y entrega bajo estándares internacionales.",
+        "summary": "La linea Bandirma-Balikesir-Manisa es un proyecto estrategico de modernizacion ferroviaria en Turquia para fortalecer la conectividad del occidente del pais. El corredor, con una longitud aproximada entre 160 y 200 km segun los tramos intervenidos, contempla rehabilitacion, duplicacion y electrificacion de via, junto con sistemas modernos de senalizacion y control para transporte de pasajeros y carga.",
+        "scope": "Direccion general de la implementacion de la senalizacion ETCS Nivel 1 y 2 y de los sistemas de telecomunicaciones, incluyendo equipos de via y embarcados para 31 trenes.",
+        "role": "Dirección de integración ETCS y telecomunicaciones.",
+        "results": "Fortalecimiento de la capacidad y confiabilidad del corredor ferroviario, con mejora de desempeno operativo bajo estandares internacionales.",
         "images": [
             "/images/projects/linea-bandirma-turquia/bandirma-turquia.jpg"
         ]

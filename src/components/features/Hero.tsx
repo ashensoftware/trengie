@@ -227,7 +227,7 @@ export default function Hero({
                                 Normativas de referencia
                             </span>
                             <div className="flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-1">
-                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">Trabajamos con ISO · CENELEC · RAMS / SIL4</span>
+                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">Trabajamos con ISO · CENELEC · EN 50119 · RAMS / SIL4</span>
                             </div>
                         </div>
                     </div>
