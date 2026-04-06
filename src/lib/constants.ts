@@ -139,7 +139,7 @@ export const LABELS = {
         ],
         faqs: [
             { q: '¿Tienen cobertura internacional?', a: 'Sí, ejecutamos proyectos en múltiples países cumpliendo normativas locales e internacionales.' },
-            { q: '¿Qué estándares de calidad siguen?', a: 'Trabajamos siguiendo normativas de referencia como ISO 9001 y CENELEC en proyectos ferroviarios; la empresa no está certificada en esas normas.' },
+            { q: '¿Qué estándares de calidad siguen?', a: 'Trabajamos siguiendo normativas de referencia como ISO 9001 y CENELEC en proyectos ferroviarios.' },
         ]
     },
     errors: {
