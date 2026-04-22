@@ -2,13 +2,11 @@ import BlogClient from '@/components/features/BlogClient';
 import { getAllPosts } from '@/lib/blog';
 import { LABELS } from '@/lib/constants';
 
-// This is now a Server Component
 export default function BlogPage() {
     const allPosts = getAllPosts();
 
     return (
         <main className="min-h-screen bg-dark">
-            {/* Hero */}
             <section className="bg-dark px-4 pt-28 pb-16 text-center sm:px-6 sm:pt-32 sm:pb-20">
                 <div className="mx-auto max-w-3xl">
                     <h1 className="text-3xl font-black uppercase tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -20,10 +18,8 @@ export default function BlogPage() {
                 </div>
             </section>
 
-            {/* Client Logic */}
             <BlogClient initialPosts={allPosts} />
 
-            {/* Subscribe CTA (Static part) */}
             <section className="bg-[#0c0e13] px-4 py-16 text-center border-t border-white/5 sm:px-6 sm:py-24">
                 <div className="mx-auto max-w-2xl bg-[#1a1a1a] p-8 rounded-2xl border border-white/5 shadow-2xl sm:p-12">
                     <span className="text-xs font-black uppercase tracking-widest text-orange">Newsletter</span>

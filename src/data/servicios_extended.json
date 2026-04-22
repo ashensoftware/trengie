@@ -4,11 +4,11 @@
         "sections": [
             {
                 "heading": "Señalización y Control de Trenes",
-                "body": "Implementamos soluciones de señalización tipo CBTC y ETCS de nivel 1 y 2, incluyendo sistemas ATP, ATO y ATS. Nuestro equipo gestiona la integración de sistemas de enclavamiento, controladores de zona y la puesta en servicio con pruebas de seguridad funcional SIL4."
+                "body": "Implementamos soluciones de señalización tipo CBTC y ETCS de nivel 1, 2 y 3, incluyendo sistemas ATP, ATO y ATS. Nuestro equipo gestiona la integración de sistemas de enclavamiento, controladores de zona y la puesta en servicio con pruebas de seguridad funcional SIL4."
             },
             {
                 "heading": "RAMS y Seguridad Funcional",
-                "body": "Realizamos análisis de Confiabilidad, Disponibilidad, Mantenibilidad y Seguridad (RAMS) bajo las normas EN 50126, EN 50128 y EN 50129. Llevamos a cabo evaluaciones de riesgo, hazard logs y verificación independiente de seguridad (ISA)."
+                "body": "Realizamos análisis de Confiabilidad, Disponibilidad, Mantenibilidad y Seguridad (RAMS) bajo las normas EN 50126, EN 50128 y EN 50129. Llevamos a cabo evaluaciones de riesgo, registros de peligros (hazard logs) y verificación independiente de seguridad (ISA)."
             },
             {
                 "heading": "Integración SCADA y CCS",
@@ -32,27 +32,27 @@
         ]
     },
     "ingenieria-electrica": {
-        "heroSubtitle": "Diseño e implementación de sistemas eléctricos de media y alta tensión para infraestructura ferroviaria y de transporte, incluyendo subestaciones, catenaria y SCADA de energía.",
+        "heroSubtitle": "Supervisión en diseño e implementación de sistemas eléctricos de media y alta tensión para infraestructura ferroviaria y de transporte, incluyendo subestaciones, catenaria y SCADA de energía.",
         "sections": [
             {
                 "heading": "Subestaciones y Electrificación",
-                "body": "Diseñamos, supervisamos y comisionamos subestaciones de tracción de media tensión y corriente continua (750V/1500V), incluyendo alimentación eléctrica, protecciones, sistemas de puesta a tierra y compatibilidad electromagnética."
+                "body": "Supervisamos, especificamos, implementamos y comisionamos subestaciones de tracción de media tensión y corriente continua (750V/1500V), incluyendo alimentación eléctrica, protecciones, sistemas de puesta a tierra y compatibilidad electromagnética."
             },
             {
                 "heading": "Catenaria y Tercer Riel",
-                "body": "Especificamos, montamos y ponemos a punto sistemas de electrificación tipo catenaria compuesta y rígida, así como sistemas de tercer riel. Experiencia directa en montaje con personal local en proyectos como el Tranvía de Ayacucho y Metro de Medellín."
+                "body": "Supervisamos, especificamos, implementamos, montamos y ponemos a punto sistemas de electrificación tipo catenaria compuesta y rígida, así como sistemas de tercer riel. Experiencia directa en montaje con personal local en proyectos como el Tranvía de Ayacucho y Metro de Medellín."
             },
             {
                 "heading": "SCADA de Energía",
-                "body": "Implementamos sistemas de supervisión, control y adquisición de datos (SCADA) para la gestión energética en tiempo real de la infraestructura ferroviaria, integrando subestaciones, alimentación de tracción y monitoreo de consumos."
+                "body": "Supervisamos, especificamos, implementamos y ponemos a punto, sistemas de supervisión, control y adquisición de datos (SCADA) para la gestión energética en tiempo real de la infraestructura ferroviaria, integrando subestaciones, alimentación de tracción y monitoreo de consumos."
             }
         ],
         "deliverables": [
-            "Diseño preliminar y de detalle de subestaciones de tracción",
-            "Montaje y puesta a punto de catenaria",
+            "Ingeniería a nivel de factibilidad de Subestaciones de tracción y electrificación con catenaria o tercer riel.",
+            "Montaje, puesta a punto y mantenimiento de Catenaria.",
             "Integración de SCADA de energía",
-            "Pruebas de protecciones y secuencias",
-            "Compatibilidad electromagnética (EMC)"
+            "Acompañamiento en Pruebas tipo y serie en fábrica.",
+            "Estudios eléctricos. (Coordinación de protecciones, aislamiento, estudios de puesta a tierra, corrientes parásitas y Compatibilidad Electromagnética)"
         ],
         "standards": [
             "IEC 61850",
@@ -71,7 +71,7 @@
             },
             {
                 "heading": "Comunicaciones Tren-Tierra",
-                "body": "Implementamos sistemas de comunicaciones críticas entre el tren y la infraestructura fija, incluyendo tecnologías TETRA, LTE-R ferroviario y FRMCS (Future Railway Mobile Communication System), cumpliendo estándares de disponibilidad del 99.999%."
+                "body": "Implementamos sistemas de comunicaciones críticas entre el tren y la infraestructura fija, incluyendo tecnologías TETRA, LTE-R ferroviario y FRMCS (sistema móvil ferroviario de próxima generación), cumpliendo altos estándares de disponibilidad y confiabilidad operacional."
             },
             {
                 "heading": "Centros de Control (OCC/NOC)",

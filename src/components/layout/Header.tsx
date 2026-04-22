@@ -28,8 +28,6 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // On home page, we want it transparent at top. On other pages, maybe not?
-    // For now, let's assume all pages have a hero or we want this behavior.
     const isTransparent = !scrolled && pathname === ROUTES.home;
 
     return (

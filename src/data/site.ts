@@ -1,4 +1,4 @@
-import type { Stat, Value, NormativeReference, ContactChannel } from '@/lib/types';
+import type { Stat, Value, NormativeReference, ContactChannel, FeaturedClient } from '@/lib/types';
 
 export const heroStats: Stat[] = [
     { value: '20+', label: 'Años del equipo en el sector' },
@@ -9,7 +9,7 @@ export const heroStats: Stat[] = [
 export const companyValues: Value[] = [
     {
         title: 'Excelencia Técnica',
-        description: 'Especialización en nichos de alta complejidad y cumplimiento de normativas internacionales (CENELEC, ISO).',
+        description: 'Especialización en nichos de alta complejidad y cumplimiento de estándares internacionales (CENELEC, ISO), junto con enfoques de gestión de proyectos alineados a PMI/IPMA y herramientas PMO.',
         icon: 'award',
     },
     {
@@ -29,7 +29,6 @@ export const companyValues: Value[] = [
     },
 ];
 
-/** Normativas con las que trabajamos (referencia en proyectos; no implica certificación de la empresa). */
 export const normativeReferences: NormativeReference[] = [
     { name: 'CENELEC EN 50126' },
     { name: 'CENELEC EN 50128' },
@@ -39,19 +38,20 @@ export const normativeReferences: NormativeReference[] = [
     { name: 'RAMS / SIL4' },
 ];
 
+export const projectManagementReferences: NormativeReference[] = [
+    { name: 'PMI / PMBOK' },
+    { name: 'IPMA / ICB' },
+    { name: 'Gestión de riesgos y cronograma' },
+    { name: 'Herramientas PMO' },
+];
+
 export const contactChannels: ContactChannel[] = [
     {
-        title: 'WhatsApp Business',
+        title: 'WhatsApp empresarial',
         description: 'Respuesta en menos de 2 horas',
         icon: 'whatsapp',
         href: 'https://wa.me/573002400939?text=Hola,%20tengo%20un%20proyecto%20y%20quiero%20evaluar%20cómo%20pueden%20apoyarme%20técnicamente',
     },
-    // {
-    //     title: 'Agendar reunión',
-    //     description: 'Calendly — 30 min consultoría gratuita',
-    //     icon: 'calendar',
-    //     href: 'https://calendly.com/trengie/consulta-tecnica',
-    // },
     {
         title: 'comercial@trengie.com',
         description: 'Correo corporativo',
@@ -93,15 +93,18 @@ export const capabilities = [
     { value: '20+', label: 'Años del equipo en el sector' },
     { value: '50+', label: 'Proyectos del equipo' },
     { value: '8', label: 'Países con ejecución de proyectos' },
-    { value: '100%', label: 'Cumplimiento RAMS' },
 ];
 
-export const featuredClients = [
-    { name: 'Metro de Medellín', icon: 'train' },
-    { name: 'Metro de Bogotá', icon: 'train' },
-    { name: 'CRRC Changchun', icon: 'factory' },
-    { name: 'Metro de Quito', icon: 'globe' },
-    { name: 'Meta Engineering', icon: 'building' },
-    { name: 'Tranvía de Ayacucho', icon: 'tram' },
+export const featuredClients: FeaturedClient[] = [
+    { name: 'Empresa Metro de Medellín', icon: 'train', logo: '/images/logos/companies/metro-medellin.png' },
+    { name: 'Empresa Metro de Bogotá', icon: 'train', logo: '/images/logos/companies/metro-bogota.svg' },
+    { name: 'CRRC Changchun', icon: 'factory', logo: '/images/logos/companies/crrc-changchun.svg' },
+    { name: 'SYSTRA', icon: 'building', logo: '/images/logos/companies/systra.svg' },
+    { name: 'Siemens Mobility', icon: 'factory', logo: '/images/logos/companies/siemens-mobility.svg' },
+    { name: 'Meta Engineering', icon: 'building', logo: '/images/logos/companies/meta-engineering.svg' },
+    { name: 'ARDANUY Ingeniería', icon: 'building', logo: '/images/logos/companies/ardanuy.svg' },
+    { name: 'PT Kereta Api Indonesia', icon: 'globe', logo: '/images/logos/companies/pt-kai.svg' },
+    { name: 'Consorcio Interventor Regiotram', icon: 'building', logo: '/images/logos/companies/consorcio-regiotram.svg' },
+    { name: 'Concesionaria Férrea de Occidente', icon: 'tram', logo: '/images/logos/companies/concesionaria-ferrea-occidente.svg' },
 ];
 

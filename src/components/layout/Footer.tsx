@@ -26,11 +26,11 @@ export default function Footer() {
                             {LABELS.footer.brand}
                         </p>
                         <div className="mt-6 flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.2em] text-white/20 font-accent">
-                            <span>engineering</span>
+                            <span>ingeniería</span>
                             <span className="h-1 w-1 rounded-full bg-orange/20" />
-                            <span>innovation</span>
+                            <span>innovación</span>
                             <span className="h-1 w-1 rounded-full bg-orange/20" />
-                            <span>excellence</span>
+                            <span>excelencia</span>
                         </div>
                     </div>
 

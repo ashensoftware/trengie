@@ -20,7 +20,6 @@ export default function ContactForm() {
     const serviceRef = useRef<HTMLSelectElement>(null);
     const searchParams = useSearchParams();
 
-    /* Pre-select service from ?servicio= query param */
     useEffect(() => {
         const param = searchParams.get('servicio');
         if (param && serviceRef.current) {
@@ -46,7 +45,6 @@ export default function ContactForm() {
 
     return (
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* Formulario */}
             <div className="lg:col-span-7">
                 <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                     <div className="grid gap-6 sm:grid-cols-2">
@@ -131,7 +129,6 @@ export default function ContactForm() {
                         </button>
                     </div>
 
-                    {/* Microcopy & Error Status */}
                     <div className="space-y-4">
                         {status !== 'success' && (
                             <p className="flex justify-center items-center gap-2 text-xs text-white/40">
@@ -150,9 +147,7 @@ export default function ContactForm() {
                 </form>
             </div>
 
-            {/* Sidebar con Proceso y FAQ */}
             <div className="lg:col-span-5 space-y-12">
-                {/* Canales directos */}
                 <div className="grid gap-3">
                     {contactChannels.map((channel) => (
                         <a
@@ -173,7 +168,6 @@ export default function ContactForm() {
                     ))}
                 </div>
 
-                {/* Qué pasa después */}
                 <section>
                     <h3 className="mb-6 text-xs font-black uppercase tracking-widest text-orange/80">
                         {LABELS.sections.quePasaDespues}
@@ -193,7 +187,6 @@ export default function ContactForm() {
                     </div>
                 </section>
 
-                {/* mini FAQ */}
                 <section>
                     <h3 className="mb-6 text-xs font-black uppercase tracking-widest text-orange/80">
                         {LABELS.sections.faq}

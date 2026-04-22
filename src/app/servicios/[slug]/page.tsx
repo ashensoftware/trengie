@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ROUTES } from '@/lib/constants';
+import { ROUTES, LABELS } from '@/lib/constants';
 import JsonLd from '@/components/ui/JsonLd';
 import serviciosData from '@/data/servicios.json';
 import extendedDataRaw from '@/data/servicios_extended.json';
@@ -41,9 +41,7 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
     return (
         <main className="bg-[#0c0e13]">
             <JsonLd data={serviceData} />
-            {/* Hero */}
             <section className="relative min-h-[60vh] flex flex-col justify-end px-4 pt-32 pb-16 sm:px-6 sm:pb-20 overflow-hidden bg-[#0c0e13] border-b border-white/5">
-                {/* Background Image & Gradient Overlays */}
                 {servicio.image && (
                     <div className="absolute inset-0 pointer-events-none">
                         <Image
@@ -54,9 +52,7 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                             sizes="100vw"
                             priority
                         />
-                        {/* Shadow to darken left side for text readability (gradient from left to right) */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#0c0e13] via-[#0c0e13]/90 to-transparent" />
-                        {/* Bottom fade to blend with content */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e13] via-transparent to-transparent" />
                     </div>
                 )}
@@ -84,7 +80,6 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                 </div>
             </section>
 
-            {/* Key Info Bar */}
             <section className="px-4 py-8 sm:px-6 bg-[#111318] border-b border-white/5">
                 <div className="mx-auto max-w-7xl grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div className="bg-white/5 border border-white/10 rounded-xl p-6">
@@ -102,7 +97,6 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                 </div>
             </section>
 
-            {/* Detailed Sections */}
             {extended && (
                 <section className="px-4 py-20 sm:px-6 sm:py-28">
                     <div className="mx-auto max-w-7xl">
@@ -129,11 +123,9 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                 </section>
             )}
 
-            {/* Deliverables + Standards */}
             {extended && (
                 <section className="px-4 py-20 sm:px-6 bg-[#111318]">
                     <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2">
-                        {/* Deliverables */}
                         <div>
                             <span className="section-label mb-6">Entregables</span>
                             <h2 className="text-2xl font-black uppercase tracking-tight text-white mb-8">
@@ -153,7 +145,6 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                             </ul>
                         </div>
 
-                        {/* Standards & Technologies */}
                         <div>
                             <span className="section-label mb-6">Normativas</span>
                             <h2 className="text-2xl font-black uppercase tracking-tight text-white mb-8">
@@ -183,7 +174,6 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                 </section>
             )}
 
-            {/* Bottom CTA */}
             <section className="px-4 py-20 text-center sm:px-6">
                 <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-b from-white/5 to-transparent p-12 border border-white/5">
                     <h2 className="text-3xl font-black text-white uppercase tracking-tighter sm:text-4xl">
@@ -194,7 +184,7 @@ export default async function ServicioDetailPage({ params }: { params: Promise<{
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href={`${ROUTES.contacto}?servicio=${slug}`} className="btn-primary px-10 py-4 text-base">
-                            Solicitar propuesta
+                            {LABELS.cta.hablarExperto}
                         </Link>
                         <Link href={ROUTES.servicios} className="btn-tertiary px-8 py-4 text-base">
                             Ver otros servicios

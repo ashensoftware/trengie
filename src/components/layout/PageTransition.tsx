@@ -9,13 +9,17 @@ export default function PageTransition({ children }: { children: ReactNode }) {
     const [displayChildren, setDisplayChildren] = useState(children);
 
     useEffect(() => {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setIsVisible(false);
-        const timeout = setTimeout(() => {
+        const fadeOut = window.setTimeout(() => {
+            setIsVisible(false);
+        }, 0);
+        const swap = window.setTimeout(() => {
             setDisplayChildren(children);
             setIsVisible(true);
         }, 150);
-        return () => clearTimeout(timeout);
+        return () => {
+            window.clearTimeout(fadeOut);
+            window.clearTimeout(swap);
+        };
     }, [pathname, children]);
 
     return (

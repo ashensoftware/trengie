@@ -1,10 +1,34 @@
 import type { Metadata } from 'next';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
 import { LABELS } from '@/lib/constants';
-import { companyValues, normativeReferences, companyDescription, methodology, capabilities, featuredClients } from '@/data/site';
+import { companyValues, normativeReferences, projectManagementReferences, companyDescription, methodology, capabilities, featuredClients } from '@/data/site';
 
 export const metadata: Metadata = {
     title: LABELS.sections.nosotros,
     description: LABELS.meta.nosotrosDesc,
+};
+
+const hasLogoAsset = (logoPath?: string) => {
+    if (!logoPath) return false;
+    const normalized = logoPath.replace(/^\//, '');
+    return existsSync(path.join(process.cwd(), 'public', normalized));
+};
+
+const resolveLogoAsset = (logoPath?: string) => {
+    if (!logoPath) return null;
+    if (hasLogoAsset(logoPath)) return logoPath;
+
+    const ext = path.extname(logoPath);
+    const base = ext ? logoPath.slice(0, -ext.length) : logoPath;
+    const candidates = ['.png', '.svg', '.webp', '.jpg', '.jpeg'];
+
+    for (const candidateExt of candidates) {
+        const candidatePath = `${base}${candidateExt}`;
+        if (hasLogoAsset(candidatePath)) return candidatePath;
+    }
+
+    return null;
 };
 
 const valueIcons: Record<string, React.ReactNode> = {
@@ -34,13 +58,12 @@ const valueIcons: Record<string, React.ReactNode> = {
 export default function SobreNosotrosPage() {
     return (
         <main className="bg-[#0c0e13]">
-            {/* Header / Intro */}
             <section className="px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20 border-b border-white/5">
                 <div className="mx-auto max-w-7xl">
                     <div className="max-w-3xl">
                         <span className="section-label mb-6">{LABELS.nav.nosotros}</span>
                         <h1 className="text-4xl font-black uppercase tracking-tight text-white sm:text-6xl">
-                            Expertise <span className="text-orange">Multidisciplinar</span>
+                            Experiencia <span className="text-orange">multidisciplinaria</span>
                         </h1>
                         <p className="mt-6 text-lg text-white/50 leading-relaxed max-w-2xl">
                             {LABELS.subtitles.nosotros}
@@ -49,12 +72,10 @@ export default function SobreNosotrosPage() {
                 </div>
             </section>
 
-            {/* Misión & Visión — Rediseñadas como Cards sólidas */}
             <section className="px-4 py-20 sm:px-6 sm:py-28">
                 <div className="mx-auto max-w-7xl">
                     <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
 
-                        {/* Misión Card */}
                         <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-12 transition-all hover:border-orange/30">
                             <div className="relative z-10">
                                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-orange mb-4 block">
@@ -79,11 +100,9 @@ export default function SobreNosotrosPage() {
                                     ))}
                                 </ul>
                             </div>
-                            {/* Accent Decoration */}
                             <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-orange/5 blur-3xl rounded-full" />
                         </div>
 
-                        {/* Visión Card */}
                         <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-12 transition-all hover:border-orange/30">
                             <div className="relative z-10">
                                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-orange mb-4 block">
@@ -109,18 +128,16 @@ export default function SobreNosotrosPage() {
                                     ))}
                                 </ul>
                             </div>
-                            {/* Accent Decoration */}
                             <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-orange/5 blur-3xl rounded-full" />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Impacto y Alcance (Métricas Senior) */}
             <section className="bg-[#0c0e13] px-4 py-16 sm:px-6 relative overflow-hidden">
                 <div className="absolute inset-0 bg-orange/5 blur-[120px] rounded-full -translate-y-1/2" />
                 <div className="mx-auto max-w-7xl relative z-10">
-                    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8">
+                    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                         {capabilities.map((cap) => (
                             <div key={cap.label} className="bg-white/5 border border-white/10 p-10 rounded-3xl text-center transition-all hover:bg-white/10 hover:border-orange/40 group">
                                 <span className="text-4xl font-black text-white lg:text-6xl tracking-tighter tabular-nums group-hover:text-orange transition-colors">{cap.value}</span>
@@ -131,53 +148,62 @@ export default function SobreNosotrosPage() {
                 </div>
             </section>
 
-            {/* Clientes y Aliados Estratégicos (NUEVO P2) */}
             <section className="px-4 py-24 sm:px-6 bg-[#111318]">
                 <div className="mx-auto max-w-7xl text-center">
-                    <span className="section-label mb-4 mx-auto">Confianza y Ejecución</span>
+                    <span className="section-label mb-4 mx-auto">Trayectoria del equipo</span>
                     <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-16">
-                        Instituciones que confían en <span className="text-orange">Trengie</span>
+                        Empresas y operadores con los que ha trabajado el <span className="text-orange">equipo Trengie</span>
                     </h2>
-                    <div className="grid grid-cols-2 gap-px bg-white/5 sm:grid-cols-3 lg:grid-cols-6 border border-white/5 rounded-3xl overflow-hidden">
-                        {featuredClients.map((client) => (
+                    <div className="grid grid-cols-2 gap-px bg-white/5 sm:grid-cols-3 lg:grid-cols-5 border border-white/5 rounded-3xl overflow-hidden">
+                        {featuredClients.map((client) => {
+                            const logoSrc = resolveLogoAsset(client.logo);
+                            return (
                             <div key={client.name} className="flex flex-col h-36 items-center justify-center gap-3 bg-[#111318] p-6 group transition-all duration-500 hover:bg-orange/5 hover:shadow-[inset_0_0_20px_rgba(239,126,36,0.1)] cursor-default">
-                                <span className="text-white/20 group-hover:text-orange transition-all duration-500 group-hover:drop-shadow-[0_0_8px_rgba(239,126,36,0.6)]">
-                                    {client.icon === 'train' && (
-                                        <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-                                        </svg>
-                                    )}
-                                    {client.icon === 'factory' && (
-                                        <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-                                        </svg>
-                                    )}
-                                    {client.icon === 'globe' && (
-                                        <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                                        </svg>
-                                    )}
-                                    {client.icon === 'building' && (
-                                        <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                                        </svg>
-                                    )}
-                                    {client.icon === 'tram' && (
-                                        <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V2m0 4c-3.314 0-6 1.343-6 3v8c0 1.657 2.686 3 6 3s6-1.343 6-3V9c0-1.657-2.686-3-6-3zM6 9h12M8.5 18.5l-2 3m9-3l2 3M9 14h.01M15 14h.01" />
-                                        </svg>
-                                    )}
-                                </span>
+                                {logoSrc ? (
+                                    <img
+                                        src={logoSrc}
+                                        alt={client.name}
+                                        className="h-8 w-28 object-contain opacity-70 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:drop-shadow-[0_0_8px_rgba(239,126,36,0.35)]"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <span className="text-white/20 group-hover:text-orange transition-all duration-500 group-hover:drop-shadow-[0_0_8px_rgba(239,126,36,0.6)]">
+                                        {client.icon === 'train' && (
+                                            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                                            </svg>
+                                        )}
+                                        {client.icon === 'factory' && (
+                                            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                                            </svg>
+                                        )}
+                                        {client.icon === 'globe' && (
+                                            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                            </svg>
+                                        )}
+                                        {client.icon === 'building' && (
+                                            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                            </svg>
+                                        )}
+                                        {client.icon === 'tram' && (
+                                            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V2m0 4c-3.314 0-6 1.343-6 3v8c0 1.657 2.686 3 6 3s6-1.343 6-3V9c0-1.657-2.686-3-6-3zM6 9h12M8.5 18.5l-2 3m9-3l2 3M9 14h.01M15 14h.01" />
+                                            </svg>
+                                        )}
+                                    </span>
+                                )}
                                 <span className="text-[10px] font-black uppercase tracking-[0.15em] text-white/40 group-hover:text-orange group-hover:drop-shadow-[0_0_8px_rgba(239,126,36,0.6)] transition-all duration-500 text-center leading-tight">
                                     {client.name}
                                 </span>
                             </div>
-                        ))}
+                        )})}
                     </div>
                 </div>
             </section>
 
-            {/* Nuestra historia + Valores */}
             <section className="px-4 py-20 sm:px-6 sm:py-32">
                 <div className="mx-auto max-w-7xl">
                     <div className="grid gap-16 lg:grid-cols-2 xl:gap-24">
@@ -191,7 +217,6 @@ export default function SobreNosotrosPage() {
                                 <p>{companyDescription.detail}</p>
                             </div>
 
-                            {/* Certificaciones Premium (P2) */}
                             {normativeReferences.length > 0 && (
                                 <div className="mt-16 bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12">
                                     <div className="flex items-center gap-4 mb-8">
@@ -202,11 +227,25 @@ export default function SobreNosotrosPage() {
                                         </div>
                                         <div>
                                             <span className="text-[10px] font-black uppercase tracking-widest text-orange block">Trabajamos con</span>
-                                            <h3 className="text-xl font-black text-white uppercase tracking-tight">Normativas de referencia</h3>
+                                            <h3 className="text-xl font-black text-white uppercase tracking-tight">Estándares internacionales</h3>
                                         </div>
                                     </div>
+                                    <span className="mb-4 block text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Normativa y marcos técnicos
+                                    </span>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         {normativeReferences.map((ref) => (
+                                            <div key={ref.name} className="flex items-center gap-3 bg-white/5 px-5 py-4 rounded-xl border border-white/5 group hover:border-orange/40 transition-colors">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-orange" />
+                                                <span className="text-xs font-black text-white/70 group-hover:text-white transition-colors">{ref.name}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <span className="mt-8 mb-4 block text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+                                        Gestión de proyectos
+                                    </span>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        {projectManagementReferences.map((ref) => (
                                             <div key={ref.name} className="flex items-center gap-3 bg-white/5 px-5 py-4 rounded-xl border border-white/5 group hover:border-orange/40 transition-colors">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-orange" />
                                                 <span className="text-xs font-black text-white/70 group-hover:text-white transition-colors">{ref.name}</span>
@@ -217,7 +256,6 @@ export default function SobreNosotrosPage() {
                             )}
                         </div>
 
-                        {/* Values Grid */}
                         <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 content-start">
                             {companyValues.map((value) => (
                                 <div key={value.title} className="bg-white/5 border border-white/5 p-8 rounded-2xl transition-all hover:bg-white/[0.07] hover:border-orange/20 group">
@@ -233,7 +271,6 @@ export default function SobreNosotrosPage() {
                 </div>
             </section>
 
-            {/* Metodología */}
             <section className="bg-[#111318] px-4 py-20 sm:px-6 sm:py-32">
                 <div className="mx-auto max-w-7xl">
                     <div className="mb-20 text-center">
@@ -252,7 +289,6 @@ export default function SobreNosotrosPage() {
                         ))}
                     </div>
 
-                    {/* Final CTA for Authority Page */}
                     <div className="mt-24 text-center">
                         <a href="/contacto" className="btn-primary !py-5 !px-12 !text-lg !rounded-full shadow-2xl shadow-orange/20">
                             Hablemos de su proyecto

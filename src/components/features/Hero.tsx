@@ -172,11 +172,11 @@ export default function Hero({
                     </h1>
 
                     <div className="mt-4 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-white/30 sm:text-xs">
-                        <span>engineering</span>
+                        <span>ingeniería</span>
                         <span className="h-1 w-1 rounded-full bg-orange/40" />
-                        <span>innovation</span>
+                        <span>innovación</span>
                         <span className="h-1 w-1 rounded-full bg-orange/40" />
-                        <span>excellence</span>
+                        <span>excelencia</span>
                     </div>
 
                     <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/50 sm:text-xl lg:leading-loose">
@@ -224,10 +224,15 @@ export default function Hero({
 
                         <div className="bg-orange/5 px-6 py-4 lg:py-8 text-center lg:text-left lg:min-w-[300px] group transition-colors hover:bg-orange/10 flex flex-col justify-center">
                             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-orange mb-1 block">
-                                Normativas de referencia
+                                Trabajamos con Estándares internacionales
                             </span>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-x-3 gap-y-1">
-                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">Trabajamos con ISO · CENELEC · EN 50119 · RAMS / SIL4</span>
+                            <div className="flex flex-col items-center gap-y-1 lg:items-start">
+                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">
+                                    Normativa y marcos técnicos: ISO · CENELEC · EN 50119 · RAMS / SIL4
+                                </span>
+                                <span className="text-xs font-bold text-white/70 group-hover:text-white transition-colors">
+                                    Gestión de proyectos: PMI/IPMA · Herramientas PMO
+                                </span>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,6 @@ import proyectosData from '@/data/proyectos.json';
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = siteConfig.url;
 
-    // Base routes
     const routes = Object.values(ROUTES).map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
@@ -16,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === '/' ? 1 : 0.8,
     }));
 
-    // Dynamic services
     const services = serviciosData.map((s) => ({
         url: `${baseUrl}/servicios/${s.slug}`,
         lastModified: new Date(),
@@ -24,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }));
 
-    // Dynamic projects
     const projects = proyectosData.map((p) => ({
         url: `${baseUrl}/proyectos/${p.slug}`,
         lastModified: new Date(),
@@ -32,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
     }));
 
-    // Dynamic blog posts
     const blogPosts = getAllPosts().map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(post.date),

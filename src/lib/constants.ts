@@ -1,5 +1,5 @@
 export const ASSETS = {
-    logo: '/assets/logo-trengie.svg', // Legacy reference
+    logo: '/assets/logo-trengie.svg',
     logoWhite: '/assets/logo-white.svg',
     logoDark: '/assets/logo-dark.svg',
     heroBg: '/images/hero-bg.jpg',
@@ -24,7 +24,6 @@ export const NAV_LINKS = [
     { href: ROUTES.servicios, label: 'Servicios' },
     { href: ROUTES.proyectos, label: 'Proyectos' },
     { href: ROUTES.sobreNosotros, label: 'Nosotros' },
-    { href: ROUTES.blog, label: 'Blog' },
     { href: ROUTES.contacto, label: 'Contacto' },
 ] as const;
 
@@ -38,19 +37,19 @@ export const FOOTER_SERVICES = [
 
 export const LABELS = {
     cta: {
-        contacto: 'Solicitar consulta técnica',
+        contacto: 'Solicitar consultoría técnica',
         cotizar: 'Cotizar presupuesto',
-        enviar: 'Enviar solicitud',
+        enviar: 'Solicitar consultoría técnica',
         enviando: 'Enviando...',
-        enviarSolicitud: 'Enviar solicitud técnica',
+        enviarSolicitud: 'Solicitar consultoría técnica',
         verProyectos: 'Ver portafolio',
         verServicios: 'Ver alcances técnicos',
         hablarExperto: 'Solicitar consultoría técnica',
         agendarReunion: 'Agendar reunión',
-        contactar: 'Solicitar consulta',
-        suscribirse: 'Suscribirse al Hub',
+        contactar: 'Solicitar consultoría técnica',
+        suscribirse: 'Suscribirse al centro de conocimiento',
         verAlcance: 'Ver detalles técnicos',
-        solicitarInfo: 'Solicitar información',
+        solicitarInfo: 'Solicitar consultoría técnica',
         volverInicio: 'Volver al inicio',
         volverProyectos: 'Volver a proyectos',
     },
@@ -60,6 +59,13 @@ export const LABELS = {
         highlight: '',
         titleEnd: '',
         subtitle: 'Señalización, electrificación, telecomunicaciones y material rodante con estándares internacionales.',
+    },
+    portfolio: {
+        aporteEquipo: 'Aporte del equipo',
+        trayectoriaEquipo: 'Trayectoria del equipo',
+        impacto: 'Impacto',
+        verProyecto: 'Ver proyecto',
+        participacionTecnica: 'Participación técnica',
     },
     sections: {
         servicios: 'Servicios',
@@ -71,11 +77,13 @@ export const LABELS = {
         certificaciones: 'Certificaciones',
         filtrarPorTipo: 'Filtrar por tipo',
         todos: 'Todos',
-        alcance: 'Alcance',
+        alcance: 'Aportes del Equipo Humano de Trengie al Proyecto',
+        descripcionProyecto: 'Descripción del proyecto',
+        empresas: 'Empresa / equipo',
         rol: 'Rol',
         resultados: 'Resultados',
         galeria: 'Galería',
-        knowledgeHub: 'Knowledge Hub',
+        knowledgeHub: 'Centro de conocimiento',
         comoTrabajamos: 'Cómo trabajamos',
         metodologia: 'Metodología',
         capacidades: 'Capacidades clave',
@@ -99,11 +107,11 @@ export const LABELS = {
     subtitles: {
         proyectos: 'Explora nuestra trayectoria en interventoría, diseño y estructuración de sistemas ferroviarios complejos.',
         servicios:
-            'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
+            'Ofrecemos servicios especializados de alto nivel en Material Rodante y Sistemas Metroferroviarios, respaldados por experiencia, conocimiento técnico y enfoque en la eficiencia operativa.',
         serviciosDetalle:
-            'Nuestras 5 verticales estratégicas cubren todas las áreas técnicas exigidas en proyectos complejos de infraestructura.',
+            'Nuestro equipo multidisciplinario acompaña proyectos en preconstrucción, construcción, pruebas, puesta en servicio, operación y mantenimiento, con integración técnica de subsistemas críticos.',
         serviciosPage:
-            'Ofrecemos soluciones integrales y llave en mano para cada fase de su proyecto ferroviario y tecnológico.',
+            'Ofrecemos servicios especializados de alto nivel en Material Rodante y Sistemas Metroferroviarios, con mejores prácticas internacionales para soluciones seguras, sostenibles y de alto desempeño.',
         nosotros:
             'Equipo multidisciplinar con más de 20 años en el sector ferroviario y proyectos ejecutados en Colombia, Ecuador, Perú, México, Brasil, Indonesia, Turquía y España.',
         contacto:
@@ -139,7 +147,7 @@ export const LABELS = {
         ],
         faqs: [
             { q: '¿Tienen cobertura internacional?', a: 'Sí, ejecutamos proyectos en múltiples países cumpliendo normativas locales e internacionales.' },
-            { q: '¿Qué estándares de calidad siguen?', a: 'Trabajamos siguiendo normativas de referencia como ISO 9001 y CENELEC en proyectos ferroviarios.' },
+            { q: '¿Qué estándares de calidad siguen?', a: 'Trabajamos con estándares internacionales como ISO 9001 y CENELEC, e incorporamos buenas prácticas de gestión de proyectos basadas en PMI/IPMA y herramientas PMO.' },
         ]
     },
     errors: {
@@ -157,7 +165,7 @@ export const LABELS = {
         nosotrosDesc:
             'Trengie: ingeniería y gestión de proyectos ferroviarios. Equipo con más de 20 años de experiencia en el sector y trayectoria en la región.',
         contactoDesc:
-            'Contacto B2B para clientes institucionales y corporativos. Consultoría técnica ferroviaria para operadores, contratistas y estructuras empresariales.',
+            'Contacto empresarial para clientes institucionales y corporativos. Consultoría técnica ferroviaria para operadores, contratistas y estructuras empresariales.',
         blogDesc:
             'Artículos sobre ingeniería ferroviaria, normativa y tendencias del sector transporte.',
         graciasDesc: 'Su mensaje ha sido enviado correctamente. Lo contactaremos pronto.',

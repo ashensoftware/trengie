@@ -41,7 +41,6 @@ h6 {
   font-family: var(--font-heading), sans-serif;
 }
 
-/* ─── Section Label ─── */
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -60,7 +59,6 @@ h6 {
   background-color: #ef7e24;
 }
 
-/* ─── Buttons ─── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -156,7 +154,6 @@ h6 {
   border-radius: 0.25rem;
 }
 
-/* legacy alias */
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -180,7 +177,6 @@ h6 {
   transform: translateY(-1px);
 }
 
-/* ─── Cards ─── */
 .card {
   border-radius: 0.75rem;
   border: 1px solid rgba(215, 205, 193, 0.5);
@@ -207,7 +203,6 @@ h6 {
   box-shadow: 0 8px 24px rgba(239, 126, 36, 0.08);
 }
 
-/* ─── Chip / Tag ─── */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -226,7 +221,6 @@ h6 {
   color: #ffffff;
 }
 
-/* ─── Form Inputs ─── */
 .input {
   display: block;
   width: 100%;
@@ -264,7 +258,6 @@ select.input {
   padding-right: 2.5rem;
 }
 
-/* ─── Prose ─── */
 .prose {
   line-height: 1.75;
 }

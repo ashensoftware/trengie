@@ -21,8 +21,11 @@ export interface Proyecto {
     location: string;
     cover: string;
     summary: string;
+    descripcionDetallada?: string;
+    empresas?: string;
     scope: string;
     role: string;
+    roleDetallado?: string;
     results: string;
     images: string[];
 }
@@ -42,7 +45,6 @@ export interface Certification {
     name: string;
 }
 
-/** Normativa de referencia con la que se trabaja en proyectos (no certificación de la empresa). */
 export interface NormativeReference {
     name: string;
 }
@@ -52,4 +54,10 @@ export interface ContactChannel {
     description: string;
     icon: string;
     href: string;
+}
+
+export interface FeaturedClient {
+    name: string;
+    icon: string;
+    logo?: string;
 }

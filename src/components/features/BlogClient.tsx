@@ -48,9 +48,7 @@ export default function BlogClient({ initialPosts }: BlogClientProps) {
             <section className="bg-dark px-4 py-8 sm:px-6 sm:py-12">
                 <div className="mx-auto max-w-7xl">
 
-                    {/* Toolbar */}
                     <div className="flex flex-col gap-4 mb-12 sm:flex-row sm:items-end sm:gap-4">
-                        {/* Search bar */}
                         <div className="relative flex-1 max-w-md">
                             <label className="mb-2 block text-[10px] font-bold uppercase tracking-widest text-white/30">
                                 Buscar
@@ -69,7 +67,6 @@ export default function BlogClient({ initialPosts }: BlogClientProps) {
                             />
                         </div>
 
-                        {/* Category Multi-Select */}
                         <div className="flex-1 max-w-sm">
                             <TagMultiSelect
                                 label="Categorías"
@@ -80,7 +77,6 @@ export default function BlogClient({ initialPosts }: BlogClientProps) {
                             />
                         </div>
 
-                        {/* Sort Dropdown */}
                         <div className="sm:min-w-[200px]">
                             <label className="mb-2 block text-[10px] font-bold uppercase tracking-widest text-white/30">
                                 Ordenar por
@@ -96,7 +92,6 @@ export default function BlogClient({ initialPosts }: BlogClientProps) {
                         </div>
                     </div>
 
-                    {/* Results Count */}
                     <div className="mb-8 flex items-center justify-between border-b border-white/5 pb-4">
                         <p className="text-[10px] font-bold uppercase tracking-widest text-white/30">
                             Mostrando {filteredAndSortedPosts.length} artículos encontrados
@@ -111,7 +106,6 @@ export default function BlogClient({ initialPosts }: BlogClientProps) {
                         )}
                     </div>
 
-                    {/* Posts Grid */}
                     {filteredAndSortedPosts.length === 0 ? (
                         <div className="py-24 text-center">
                             <h3 className="text-xl font-bold text-white/60">No se encontraron artículos</h3>

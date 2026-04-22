@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const processSteps = [
-    { number: '01', title: 'Discovery', desc: 'Análisis de requerimientos, normativa aplicable y condiciones del proyecto.' },
+    { number: '01', title: 'Diagnóstico', desc: 'Análisis de requerimientos, normativa aplicable y condiciones del proyecto.' },
     { number: '02', title: 'Ingeniería', desc: 'Diseño conceptual, básico y de detalle con estándares internacionales.' },
     { number: '03', title: 'Implementación', desc: 'Montaje, integración de sistemas y coordinación multidisciplinaria.' },
     { number: '04', title: 'Pruebas', desc: 'Validación funcional, pruebas estáticas/dinámicas y verificación RAMS.' },
@@ -25,7 +25,6 @@ export default function ServiciosPage() {
 
     return (
         <>
-            {/* Hero */}
             <section className="bg-dark px-4 pt-28 pb-16 text-center sm:px-6 sm:pt-32 sm:pb-20">
                 <div className="mx-auto max-w-3xl">
                     <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -37,7 +36,6 @@ export default function ServiciosPage() {
                 </div>
             </section>
 
-            {/* Service Cards */}
             <section className="bg-alabaster px-4 py-16 sm:px-6 sm:py-24">
                 <div className="mx-auto max-w-7xl">
                     <SectionHeading
@@ -53,7 +51,6 @@ export default function ServiciosPage() {
                 </div>
             </section>
 
-            {/* Cómo trabajamos — Process Timeline */}
             <section className="bg-dark px-4 py-16 sm:px-6 sm:py-24">
                 <div className="mx-auto max-w-7xl">
                     <SectionHeading
@@ -82,7 +79,6 @@ export default function ServiciosPage() {
                 </div>
             </section>
 
-            {/* Bottom CTA */}
             <section className="bg-[#0c0e13] px-4 py-16 text-center sm:px-6 sm:py-20">
                 <div className="mx-auto max-w-2xl">
                     <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">

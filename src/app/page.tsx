@@ -85,11 +85,9 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── MISIÓN & VISIÓN — Compact ── */}
       <section className="bg-[#0c0e13] px-4 py-16 sm:px-6 sm:py-24 border-t border-white/5">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
-            {/* Misión */}
             <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-10 transition-all hover:border-orange/30">
               <div className="relative z-10">
                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange">
@@ -107,7 +105,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visión */}
             <div className="group relative overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 p-8 sm:p-10 transition-all hover:border-orange/30">
               <div className="relative z-10">
                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange/10 text-orange">
@@ -128,7 +125,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SECCIÓN DE CIERRE E IMPULSO ── */}
       <section className="bg-gradient-to-br from-orange to-[#b35a15] px-4 py-24 sm:px-6 text-center relative overflow-hidden shadow-[inset_0_20px_40px_rgba(0,0,0,0.2)]">
         <div className="absolute inset-0 bg-black/10" />
         <div className="mx-auto max-w-4xl relative z-10">

@@ -15,7 +15,6 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 export default function ServiceCard({ service }: { service: Servicio }) {
     return (
         <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-grey/50 bg-white transition-all hover:border-orange/30 hover:shadow-lg">
-            {/* Top Image Banner */}
             <div className="relative h-48 w-full overflow-hidden bg-dark sm:h-56">
                 <BrandImage
                     src={service.image || '/images/hero-bg.jpg'}
@@ -28,7 +27,6 @@ export default function ServiceCard({ service }: { service: Servicio }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent" />
 
-                {/* Floating Icon over the image */}
                 <div className="absolute bottom-4 left-5 rounded-lg bg-orange p-2.5 text-white shadow-md backdrop-blur-sm sm:bottom-6 sm:left-6 sm:p-3">
                     {(() => {
                         const Icon = iconMap[service.icon] ?? iconMap.clipboard;
