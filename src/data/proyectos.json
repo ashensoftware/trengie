@@ -72,22 +72,6 @@
         ]
     },
     {
-        "title": "Metro de Lima",
-        "slug": "metro-lima",
-        "category": "Supervisión Técnica",
-        "year": 2022,
-        "location": "Lima, Perú",
-        "cover": "/images/projects/metro-lima/metro-lima.jpg",
-        "summary": "Supervisión de electrificación (subestaciones y catenaria) y auditoría de servicio en la Línea 1; apoyo técnico en la Línea 2.",
-        "empresas": "ARDANUY INGENIERIA S.A. · Sucursal Perú",
-        "scope": "Supervisión de sistemas eléctricos, evaluación de interfaces y ciclos de vida",
-        "role": "Supervisor de Electrificación Ferroviaria (Subestaciones y Catenaria), Auditor de niveles de servicio.",
-        "results": "Contribución a la continuidad operativa y planes de mejora del concesionario.",
-        "images": [
-            "/images/projects/metro-lima/metro-lima.jpg"
-        ]
-    },
-    {
         "title": "Tren de Alta Velocidad Lima - Barranca",
         "slug": "tren-alta-velocidad-lima-barranca",
         "category": "Estructuración Ferroviaria",
